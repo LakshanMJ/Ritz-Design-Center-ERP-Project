@@ -1,15 +1,17 @@
-### Internal ERP System (Private Project)
-**Role:** Software Developer  
+### Nexa ERP System
+**Role:** Frontend Software Developer  
 **Stack:** React, Python, PostgreSQL  
 
-Contributed to the development of an internal ERP platform designed to streamline company operations such as inventory, HR, and finance.  
+Contributed to the development of an internal ERP platform at Ritz design center Ltd, designed to streamline company operations such as merchandising, inventory, manufacturing, logistics, HR, and finance.  
 Implemented core modules for user authentication, role-based access control, and data visualization dashboards.  
 Focused on optimizing REST API performance and improving frontend responsiveness.
 
+**Note: This repository contains a modified, limited version of the original ERP platform with dummy data only. It is intended solely to showcase my contributions and does not represent the full software used in the company.
 
-# Inventory App - Setup Guide
 
-This guide will help you set up, run, and access your ERP System from the repository:
+# Setup Guide
+
+This guide will help you set up, run, and access the ERP System from the repository:
 
 [https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project](https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project)
 
