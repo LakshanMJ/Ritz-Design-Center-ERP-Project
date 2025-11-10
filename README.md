@@ -131,6 +131,8 @@ yarn dev
 ---
 
 ## 10. Sample Product Images <a name="images"></a>
+<img src="sample images/login.png" alt="Login Page" width="400">
+<img src="sample images/product2.png" alt="Product 2" width="400">
 
 ---
 
