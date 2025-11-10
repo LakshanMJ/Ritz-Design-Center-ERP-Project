@@ -1,0 +1,108 @@
+http://localhost:3000/
+
+u/n - admin
+pwd - admin@12345
+
+Inventory App - Setup Guide (Existing Repository)
+This guide will help you set up, run, and access your Laravel Inventory App from the repository:
+https://github.com/AnujaLd/inventory-app.git
+
+Table of Contents
+1.Requirements
+2.Clone the Repository
+3.Install Dependencies
+4.Environment Setup
+5.Database Setup
+6.Run Migrations
+7.Build Frontend Assets
+8.Start the Server
+9.Access the Application
+10.Register, Login, and Go to Dashboard
+11.Sample Product Images
+12.Troubleshooting
+
+1. Requirements
+PHP >= 8.x
+Composer
+Node.js & npm
+A database (MySQL, SQLite, etc.)
+
+2. Clone the Repository
+git clone https://github.com/AnujaLd/inventory-app.git
+cd inventory-app
+
+3. Install Dependencies
+Install PHP dependencies:
+
+composer install
+Install Node.js dependencies:
+
+npm install
+
+4. Environment Setup
+Copy the example environment file and generate your app key:
+
+cp .env.example .env
+php artisan key:generate
+Edit .env to set your database credentials and other configuration.
+
+5. Database Setup
+Edit the .env file to match your database settings:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=your_db
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
+Create the database if it does not exist.
+
+6. Run Migrations
+php artisan migrate
+
+7. Build Frontend Assets
+If the project uses Laravel Mix or Vite:
+
+npm run build
+# or, for development
+npm run dev
+
+8. Start the Server
+php artisan serve
+By default, it runs at http://127.0.0.1:8000.
+
+9. Access the Application
+Open http://127.0.0.1:8000 in your browser.
+You will see the home/welcome page.
+
+10. Register, Login, and Go to Dashboard
+Register
+Click Register or go to http://127.0.0.1:8000/register.
+Fill out the registration form.
+Submit to create your account.
+Login
+Go to http://127.0.0.1:8000/login.
+Enter your credentials.
+Submit to log in.
+Access Dashboard
+After login, you are redirected to the dashboard (http://127.0.0.1:8000/dashboard).
+You now see the Inventory Dashboard UI.
+
+11. Sample Product Images
+
+12. Troubleshooting
+Permissions Issues:
+Run chmod -R 775 storage bootstrap/cache if you get permission errors.
+Missing .env:
+Copy .env.example as described above.
+Images Not Showing:
+Ensure product images are in public/images/.
+Assets Not Loading:
+Run npm install and npm run dev.
+
+Flow Summary
+Clone repo & install dependencies.
+Configure .env and database.
+Run migrations & build assets.
+Start server, visit home.
+Register, login, and enjoy the dashboard!
