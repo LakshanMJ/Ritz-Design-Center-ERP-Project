@@ -54,74 +54,78 @@ cd <repo-folder>
 
 ## 3. Install Dependencies <a name="install-deps"></a>
 
-Install PHP dependencies:
+Backend (Django) dependencies:
 
 ```bash
-composer install
+python -m venv env          # create virtual environment
+source env/bin/activate     # mac/linux
+# OR
+env\Scripts\activate        # windows
+pip install -r backend/requirements.txt
 ```
 
-Install Node.js dependencies:
+Frontend (React / Next.js) dependencies:
 
 ```bash
+cd frontend
 npm install
+cd ..
 ```
 
 ---
 
 ## 4. Environment Setup <a name="env"></a>
 
-Copy the example environment file and generate your app key:
+1. Copy the example environment file:
 
 ```bash
-cp .env.example .env
-php artisan key:generate
+cp backend/.env.example backend/.env
 ```
 
-Edit `.env` to set your database credentials and other configuration.
+2. Edit .env to set your database credentials and Django secret key.
+Example (.env):
+
+```bash
+DJANGO_SECRET_KEY=your_secret_key
+DJANGO_DEBUG=True
+DB_NAME=erp_db
+DB_USER=erp_user
+DB_PASSWORD=erp123
+DB_HOST=localhost
+DB_PORT=5432
+```
 
 ---
 
 ## 5. Database Setup <a name="db"></a>
 
-Edit the `.env` file to match your database settings:
-
-```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=your_db
-DB_USERNAME=your_user
-DB_PASSWORD=your_password
-```
-
-Create the database if it does not exist.
+If using SQLite, no extra setup is required.
+If using PostgreSQL/MySQL, create the database and user as per .env.
 
 ---
 
 ## 6. Run Migrations <a name="migrate"></a>
 
 ```bash
-php artisan migrate
+cd backend
+python manage.py migrate
 ```
 
 ---
 
-## 7. Build Frontend Assets <a name="frontend"></a>
-
-If the project uses Laravel Mix or Vite:
+## 7. Start Backend Server <a name="backend"></a>
 
 ```bash
-npm run build
-# or, for development
-npm run dev
+python manage.py runserver
 ```
 
 ---
 
-## 8. Start the Server <a name="server"></a>
+## 8. Start Frontend Server <a name="server"></a>
 
 ```bash
-php artisan serve
+cd frontend
+npm start
 ```
 
 By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
@@ -131,50 +135,40 @@ By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 ## 9. Access the Application <a name="access"></a>
 
 - Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
-- You will see the home/welcome page.
+- You will see the ERP login screen.
 
 ---
 
-## 10. Register, Login, and Go to Dashboard <a name="userflow"></a>
+## 10. Admin Login (Demo Credentials) <a name="userflow"></a>
+- Since this is a demo ERP, the admin user is pre-created in the database:
+    | Role  | Username |   Password  |
+    | ----- | -------- | ----------- |
+    | Admin | admin    | admin@12345 |
 
-### Register
-
-- Click **Register** or go to [http://127.0.0.1:8000/register](http://127.0.0.1:8000/register).
-- Fill out the registration form.
-- Submit to create your account.
-
-### Login
-
-- Go to [http://127.0.0.1:8000/login](http://127.0.0.1:8000/login).
-- Enter your credentials.
-- Submit to log in.
-
-### Access Dashboard
-
-- After login, you are redirected to the dashboard (http://127.0.0.1:8000/dashboard).
-- You now see the Inventory Dashboard UI.
+- Login using these credentials to access the Admin Dashboard.
+- Admin can create users and manage the ERP system.
 
 ---
 
-## 12. Troubleshooting <a name="troubleshooting"></a>
+## 11. Troubleshooting <a name="troubleshooting"></a>
 
-- **Permissions Issues**:  
-  Run `chmod -R 775 storage bootstrap/cache` if you get permission errors.
-- **Missing .env**:  
-  Copy `.env.example` as described above.
-- **Images Not Showing**:  
-  Ensure product images are in `public/images/`.
-- **Assets Not Loading**:  
-  Run `npm install` and `npm run dev`.
+- **Server not starting**:  
+  Ensure virtual environment is active and dependencies installed.
+- **Frontend not loading**:  
+  Check npm install completed successfully.
+- **Database connection errors**:  
+  Make sure .env matches your DB credentials.
+- **Migrations errors**:  
+  Delete db.sqlite3 and run python manage.py migrate again (if using SQLite).
 
 ---
 
 ## Flow Summary
 
-1. Clone repo & install dependencies.
-2. Configure `.env` and database.
-3. Run migrations & build assets.
-4. Start server, visit home.
-5. Register, login, and enjoy the dashboard!
+1. Clone repo & install backend/frontend dependencies.
+2. Copy .env.example → .env and update credentials.
+3. Run Django migrations.
+4. Start backend and frontend servers.
+5. Open frontend, login as admin/admin123, explore ERP dashboard.
 
 ---
