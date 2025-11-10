@@ -60,13 +60,13 @@ python -m venv env          # create virtual environment
 source env/bin/activate     # mac/linux
 # OR
 env\Scripts\activate        # windows
-pip install -r backend/requirements.txt
+pip install -r erp-backend-dev/requirements.txt
 ```
 
 Frontend (React / Next.js) dependencies:
 
 ```bash
-cd frontend
+cd erp-frontend-dev
 npm install
 cd ..
 ```
