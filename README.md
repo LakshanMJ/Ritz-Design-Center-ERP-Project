@@ -25,11 +25,10 @@ This guide will help you set up, run, and access your ERP System from the reposi
 6. [Run Migrations](#migrate)
 7. [Start Backend Server](#start-backend-server)  
 8. [Start Frontend Server](#start-frontend-server)
-10. [Access the Application](#access)
-11. [Admin Login (Demo Credentials)](#admin-login-demo-credentials)
-12. [Sample Data](#sample-data)  
-13. [Sample Product Images](#images)
-14. [Troubleshooting](#troubleshooting)
+9. [Access the Application](#access)
+10. [Admin Login (Demo Credentials)](#admin-login) 
+11. [Sample Product Images](#images)
+12. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -169,6 +168,6 @@ By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 2. Copy .env.example → .env and update credentials.
 3. Run Django migrations.
 4. Start backend and frontend servers.
-5. Open frontend, login as admin/admin123, explore ERP dashboard.
+5. Open frontend, login as admin/admin@12345, explore ERP dashboard.
 
 ---
