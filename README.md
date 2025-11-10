@@ -23,12 +23,13 @@ This guide will help you set up, run, and access your ERP System from the reposi
 4. [Environment Setup](#env)
 5. [Database Setup](#db)
 6. [Run Migrations](#migrate)
-7. [Build Frontend Assets](#frontend)
-8. [Start the Server](#server)
-9. [Access the Application](#access)
-10. [Register, Login, and Go to Dashboard](#userflow)
-11. [Sample Product Images](#images)
-12. [Troubleshooting](#troubleshooting)
+7. [Start Backend Server](#start-backend-server)  
+8. [Start Frontend Server](#start-frontend-server)
+10. [Access the Application](#access)
+11. [Admin Login (Demo Credentials)](#admin-login-demo-credentials)
+12. [Sample Data](#sample-data)  
+13. [Sample Product Images](#images)
+14. [Troubleshooting](#troubleshooting)
 
 ---
 
