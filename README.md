@@ -35,18 +35,19 @@ This guide will help you set up, run, and access your ERP System from the reposi
 
 ## 1. Requirements <a name="requirements"></a>
 
-- PHP >= 8.x
-- Composer
-- Node.js & npm
-- A database (MySQL, SQLite, etc.)
+- Python >= 3.10  
+- Node.js & npm  
+- Django >= 4.x  
+- React (create-react-app or Next.js)  
+- A database (SQLite included, or MySQL/PostgreSQL)  
 
 ---
 
 ## 2. Clone the Repository <a name="clone"></a>
 
 ```bash
-git clone https://github.com/AnujaLd/inventory-app.git
-cd inventory-app
+git clone <Your GitHub URL>
+cd <repo-folder>
 ```
 
 ---
