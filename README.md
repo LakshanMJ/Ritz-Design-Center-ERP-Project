@@ -45,8 +45,8 @@ This guide will help you set up, run, and access your ERP System from the reposi
 ## 2. Clone the Repository <a name="clone"></a>
 
 ```bash
-git clone <Your GitHub URL>
-cd <repo-folder>
+git clone [<Your GitHub URL>](https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project.git)
+cd Ritz-Design-Center-ERP-Project
 ```
 
 ---
