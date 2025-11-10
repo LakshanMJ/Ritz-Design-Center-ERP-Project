@@ -112,7 +112,7 @@ python manage.py migrate
 
 ---
 
-## 7. Start Backend Server <a name="backend"></a>
+## 7. Start Backend Server <a name="start-backend-server"></a>
 
 ```bash
 python manage.py runserver
@@ -120,7 +120,7 @@ python manage.py runserver
 
 ---
 
-## 8. Start Frontend Server <a name="server"></a>
+## 8. Start Frontend Server <a name="start-frontend-server"></a>
 
 ```bash
 cd frontend
@@ -138,7 +138,7 @@ By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ---
 
-## 10. Admin Login (Demo Credentials) <a name="userflow"></a>
+## 10. Admin Login (Demo Credentials) <a name="admin-login"></a>
 - Since this is a demo ERP, the admin user is pre-created in the database:
     | Role  | Username |   Password  |
     | ----- | -------- | ----------- |
@@ -149,7 +149,11 @@ By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ---
 
-## 11. Troubleshooting <a name="troubleshooting"></a>
+## 11. Sample Product Images <a name="images"></a>
+
+---
+
+## 12. Troubleshooting <a name="troubleshooting"></a>
 
 - **Server not starting**:  
   Ensure virtual environment is active and dependencies installed.
