@@ -40,11 +40,32 @@ This guide will help you set up, run, and access your ERP System from the reposi
 ---
 
 ## Clone the Repository
-git clone <Your GitHub URL>
-cd <repo-folder>
+\`\`\`bash
+git clone https://github.com/Anujald/inventory-app.git
+cd inventory-app
+\`\`\`
 
 ---
 
 ## Install Dependencies
 ### Backend (Django)
 ### Frontend (React / Next.js)
+
+
+---
+
+✅ **How this works on GitHub:**  
+- Every block with triple backticks (\`\`\`) becomes a **copyable box**.  
+- `bash` or `env` after the first backticks gives **syntax highlighting**.  
+- Users can click **“Copy”** in the GitHub interface directly.  
+
+---
+
+If you want, I can also **make the README visually even nicer** with:  
+
+- Screenshot thumbnails inline  
+- Buttons/links for backend/frontend  
+- Quick **demo flow diagram**  
+
+Do you want me to do that next?
+
