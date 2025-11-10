@@ -9,9 +9,9 @@ Focused on optimizing REST API performance and improving frontend responsiveness
 
 # Inventory App - Setup Guide
 
-This guide will help you set up, run, and access your ERP System from the repository: 
-[https://github.com/AnujaLd/inventory-app.git](https://github.com/AnujaLd/inventory-app.git)
-[https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project]
+This guide will help you set up, run, and access your ERP System from the repository:
+
+[https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project](https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project)
 
 ---
 
