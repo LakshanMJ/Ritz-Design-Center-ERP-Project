@@ -56,10 +56,6 @@ cd Ritz-Design-Center-ERP-Project
 Backend (Django) dependencies:
 
 ```bash
-python -m venv env          # create virtual environment
-source env/bin/activate     # mac/linux
-# OR
-env\Scripts\activate        # windows
 pip install -r erp-backend-dev/requirements.txt
 ```
 
@@ -75,25 +71,31 @@ cd ..
 
 ## 4. Environment Setup <a name="env"></a>
 
-1. Copy the example environment file:
+1. Open the backend settings file:
 
 ```bash
-cp backend/.env.example backend/.env
+erp-backend-dev/<your_project_name>/settings.py
 ```
 
-2. Edit .env to set your database credentials and Django secret key.
-Example (.env):
+2. Update the following values to match your local database:
 
 ```bash
-DJANGO_SECRET_KEY=your_secret_key
-DJANGO_DEBUG=True
-DB_NAME=erp_db
-DB_USER=erp_user
-DB_PASSWORD=erp123
-DB_HOST=localhost
-DB_PORT=5432
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'roshan',       # change this if needed
+        'USER': 'postgres',     # your DB username
+        'PASSWORD': '1234@qwer',# your DB password
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 ```
+3. Ensure your allowed hosts include localhost:
 
+```bash
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+```
 ---
 
 ## 5. Database Setup <a name="db"></a>
