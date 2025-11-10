@@ -22,13 +22,12 @@ This guide will help you set up, run, and access your ERP System from the reposi
 3. [Install Dependencies](#install-deps)
 4. [Environment Setup](#env)
 5. [Database Setup](#db)
-6. [Run Migrations](#migrate)
-7. [Start Backend Server](#start-backend-server)  
-8. [Start Frontend Server](#start-frontend-server)
-9. [Access the Application](#access)
-10. [Admin Login (Demo Credentials)](#admin-login) 
-11. [Sample Product Images](#images)
-12. [Troubleshooting](#troubleshooting)
+6. [Start Backend Server](#start-backend-server)  
+7. [Start Frontend Server](#start-frontend-server)
+8. [Access the Application](#access)
+9. [Admin Login (Demo Credentials)](#admin-login) 
+10. [Sample Product Images](#images)
+11. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -63,7 +62,7 @@ Frontend (React / Next.js) dependencies:
 
 ```bash
 cd erp-frontend-dev
-npm install
+yarn install
 cd ..
 ```
 
@@ -71,50 +70,30 @@ cd ..
 
 ## 4. Environment Setup <a name="env"></a>
 
-1. Open the backend settings file:
+- This project uses the preconfigured settings file:
+`ritzerp/settings/lakshan_dev.py`
 
-```bash
-erp-backend-dev/<your_project_name>/settings.py
-```
+It already contains:
+- SECRET_KEY
+- DEBUG=True
+- DATABASES connection info
+- Allowed hosts
+- REST framework and JWT config
 
-2. Update the following values to match your local database:
-
-```bash
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'roshan',       # change this if needed
-        'USER': 'postgres',     # your DB username
-        'PASSWORD': '1234@qwer',# your DB password
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-```
-3. Ensure your allowed hosts include localhost:
-
-```bash
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-```
+No `.env` file is required for local development.
 ---
 
 ## 5. Database Setup <a name="db"></a>
 
-If using SQLite, no extra setup is required.
-If using PostgreSQL/MySQL, create the database and user as per .env.
+This project uses PostgreSQL with the database `DummyDB`.  
+
+- The connection details are already in the settings file.
+- Make sure PostgreSQL is running locally.
+- The database comes with dummy data, so no migrations are required for initial setup.
 
 ---
 
-## 6. Run Migrations <a name="migrate"></a>
-
-```bash
-cd backend
-python manage.py migrate
-```
-
----
-
-## 7. Start Backend Server <a name="start-backend-server"></a>
+## 6. Start Backend Server <a name="start-backend-server"></a>
 
 ```bash
 python manage.py runserver
@@ -122,25 +101,23 @@ python manage.py runserver
 
 ---
 
-## 8. Start Frontend Server <a name="start-frontend-server"></a>
+## 7. Start Frontend Server <a name="start-frontend-server"></a>
 
 ```bash
 cd frontend
-npm start
+yarn dev
 ```
-
-By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ---
 
-## 9. Access the Application <a name="access"></a>
+## 8. Access the Application <a name="access"></a>
 
 - Open [http://127.0.0.1:8000](http://127.0.0.1:8000) in your browser.
 - You will see the ERP login screen.
 
 ---
 
-## 10. Admin Login (Demo Credentials) <a name="admin-login"></a>
+## 9. Admin Login (Demo Credentials) <a name="admin-login"></a>
 - Since this is a demo ERP, the admin user is pre-created in the database:
     | Role  | Username |   Password  |
     | ----- | -------- | ----------- |
@@ -151,11 +128,11 @@ By default, it runs at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ---
 
-## 11. Sample Product Images <a name="images"></a>
+## 10. Sample Product Images <a name="images"></a>
 
 ---
 
-## 12. Troubleshooting <a name="troubleshooting"></a>
+## 11. Troubleshooting <a name="troubleshooting"></a>
 
 - **Server not starting**:  
   Ensure virtual environment is active and dependencies installed.
