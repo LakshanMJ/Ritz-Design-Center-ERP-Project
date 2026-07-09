@@ -133,12 +133,12 @@ export const logout = () => {
 
 export const login = async (username: string, password: string) => {
     try {
-        // const resp = await api.post('shared/user/authenticate/', { username: username, password: password });
+        const resp = await api.post('shared/user/authenticate/', { username: username, password: password });
 
-        const resp = await api.post("HELLO_TEST/", {
-            username,
-            password,
-        });
+        // const resp = await api.post("HELLO_TEST/", {
+        //     username,
+        //     password,
+        // });
 
         const respData = resp?.data || {};
 
