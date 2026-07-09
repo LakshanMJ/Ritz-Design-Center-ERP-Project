@@ -5,7 +5,7 @@ import sys
 
 
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ritzerp.settings.settings')        # ritzerp.settings.settings
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'git ritzerp.settings.lakshan_dev')        # ritzerp.settings.settings
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
