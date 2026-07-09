@@ -14,13 +14,13 @@ declare module 'axios' {
     }
 }
 
-// const api = axios.create({
-//     baseURL: apiBaseURL()
-// });
-
 const api = axios.create({
-    baseURL: "https://nexa-erp-project.onrender.com/THIS_SHOULD_APPEAR/"
+    baseURL: apiBaseURL()
 });
+
+// const api = axios.create({
+//     baseURL: "https://nexa-erp-project.onrender.com/THIS_SHOULD_APPEAR/"
+// });
 
 api.interceptors.request.use((config) => {
     const session = JSON.parse(localStorage.getItem('session'));
