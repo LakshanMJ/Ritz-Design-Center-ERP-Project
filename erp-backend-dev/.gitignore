@@ -1,0 +1,133 @@
+# Django #
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+*.sqlite3
+media
+
+# Backup files # 
+*.bak 
+
+# If you are using PyCharm #
+.idea/*
+.idea/**/workspace.xml 
+.idea/**/tasks.xml 
+.idea/dictionaries 
+.idea/**/dataSources/ 
+.idea/**/dataSources.ids 
+.idea/**/dataSources.xml 
+.idea/**/dataSources.local.xml 
+.idea/**/sqlDataSources.xml 
+.idea/**/dynamic.xml 
+.idea/**/uiDesigner.xml 
+.idea/**/gradle.xml 
+.idea/**/libraries 
+.idea/
+*.iws /out/
+
+# Python # 
+*.py[cod] 
+*$py.class 
+
+# Distribution / packaging 
+.Python build/ 
+develop-eggs/ 
+dist/ 
+downloads/ 
+eggs/ 
+.eggs/ 
+lib/ 
+lib64/ 
+parts/ 
+sdist/ 
+var/ 
+wheels/ 
+*.egg-info/ 
+.installed.cfg 
+*.egg 
+*.manifest 
+*.spec 
+
+# Installer logs 
+pip-log.txt 
+pip-delete-this-directory.txt 
+
+# Unit test / coverage reports 
+htmlcov/ 
+.tox/ 
+.coverage 
+.coverage.* 
+.cache 
+.pytest_cache/ 
+nosetests.xml 
+coverage.xml 
+*.cover 
+.hypothesis/ 
+
+
+# pyenv 
+.python-version 
+
+# celery 
+celerybeat-schedule.* 
+
+# SageMath parsed files 
+*.sage.py 
+
+# Environments 
+.env 
+.venv 
+env/ 
+venv/ 
+ENV/ 
+env.bak/ 
+venv.bak/ 
+
+# mkdocs documentation 
+/site 
+
+# mypy 
+.mypy_cache/ 
+
+# sftp configuration file
+sftp-config.json 
+
+# Package control specific files Package 
+Control.last-run 
+Control.ca-list 
+Control.ca-bundle 
+Control.system-ca-bundle 
+GitHub.sublime-settings
+
+.DS_Store
+shared/.DS_Store
+shared/static/.DS_Store
+shared/static/CACHE
+shared/static/vendors/.DS_Store
+
+# settings file
+ritzerp/settings/aruna_base.py
+ritzerp/settings/settings.py
+ritzerp/settings/mahesh_dev.py
+ritzerp/settings/dhanushka_dev.py
+ritzerp/settings/lakshan_dev.py
+ritzerp/settings/anuja_base.py
+ritzerp/settings/Prem_base.py
+ritzerp/settings/nipuna_dev.py
+commands.txt
+/.idea/
+
+costing/patterns
+
+
+run_all_commands.py
+run_assign_roles.py
+
+finance/payments/test.py
+
+#bat files
+initial_setup.bat
+open_in_vs_code.bat
+meta_data_initialize_script.py

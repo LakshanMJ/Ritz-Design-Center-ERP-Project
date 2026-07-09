@@ -1,0 +1,2 @@
+PO_CLUB_MATERIAL_LEFTOVER_VERIFICATION_URL = 'test'
+TRANSFER_MATERIAL_VERIFICATION_URL = 'purchase_order/material_transfer_list/'

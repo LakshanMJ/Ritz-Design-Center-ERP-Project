@@ -1,0 +1,75 @@
+{% extends "email_base_template.html" %}
+{% load shared_tags %}
+
+{%  block email_content %}
+    <div style="margin-bottom: 30px">
+        Please review the materials in the attached Excel file and fill the quote details.
+
+        <b>Customer</b>: {{ customer }} ({{ brand }}).
+        {% comment %} <p>Expiration Date (DD/MM/YYYY): <div style="width: 300px; height: 20px; border: solid 1px black;" class="expiration_date"></div></p>
+        <p>Tentative Material In House Date (DD/MM/YYYY): <div style="width: 300px; height: 20px; border: solid 1px black;" class="tentative_in_house_date"></div></p> {% endcomment %}
+    </div>
+    {% comment %} {% for type, type_data in data_array.items %}
+        <div style="margin-top: 10px;">
+            <div style="">
+                <h3>{{type_data.material_type}}</h3>
+            </div>
+            <table id="quote_data_table-{{ forloop.counter }}_{{ type_data.material_name }}" width="98%" border="0" cellpadding="0" cellspacing="0" >
+                <tr>
+                    {% for header in type_data.table_headers %}
+                        <th align="left" bgcolor="#cecece"
+                            style="{% if header.name in hide_columns  %}display: none !important;{% endif %}
+                                    font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: 12px; color: black;
+                                    padding:10px; padding-right:0; {% if header.name in highlighted_columns %}width: 200px{% endif %} ">
+                            {{header.label}}
+                        </th>
+                    {% endfor %}
+                </tr>
+                {% for data in type_data.table_data %}
+                    <tr>
+                        {% for header in type_data.table_headers %}
+                            {% if header.name in highlighted_columns %}
+                                <td align="left" style="height: 38px; border: solid 1px black;">
+                                </td>
+                            {% elif header.name in hide_columns %}
+                                <td style="display:none !important;">
+                                    {{data|get_display_value_from_header:header}}
+                                </td>
+                            {% else %}
+                                {% if type_data.material_type == "Fabric" %}
+                                    <td align="left" valign="top" bgcolor="#FFFFFF" style="font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: 12px; color: #252525; padding:10px; padding-right:0;">
+                                        {{data|get_display_value_from_header:header}}
+                                    </td>
+                                {% else %}
+                                    <td align="left" valign="top" bgcolor="#FFFFFF" style="font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: 12px; color: #252525; padding:10px; padding-right:0;">
+                                        {{data|get_display_value_from_header:header}}
+                                    </td>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% if type_data.material_type == "Fabric" %}
+                        {% for x in fabric_loop %}
+                            <tr>
+                                {% for header in type_data.table_headers %}
+                                    {% if header.name in highlighted_columns %}
+                                        <td align="left" bgcolor="#FFFFFF" style="height: 38px; border: solid 1px black;">
+
+                                        </td>
+                                    {% elif header.name in hide_columns %}
+                                        <td style="display:none !important;">
+                                            {{data|get_display_value_from_header:header}}
+                                        </td>
+                                    {% else %}
+                                        <td style="padding: 10px;"></td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    {% endfor %} {% endcomment %}
+{% endblock %}

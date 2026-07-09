@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+// Bootstrap
+$font-family-sans-serif: "Open Sans", "Helvetica", "Arial", sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.5;
+$enable-transitions: false;
+$primary: #005ea2;
+//$light: #f9f8f7;
+$border-radius: 4px;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+$input-focus-bg: #F7FEFF;
+//$input-focus-width: 2px;
+$input-focus-box-shadow: 0 0 0 3px #B4DCE2,0 1px 2px rgba(15,17,17,.15) inset;
+
+$btn-transition: none;
+$btn-box-shadow: 0 2px 5px 0 rgba(213,217,217,.5);
+$nav-pills-border-radius: 0;
+$nav-pills-link-active-bg: #eaeaea;
+$nav-pills-link-active-color: #333;
+
+@import '../../static/vendors/bootstrap/bootstrap.scss';
+
+// Custom
+.main-navbar {
+    background-color: #13428b;
+}
+
+.table {
+    > :not(:first-child) {
+        border-top-width: 1px;
+    }
+
+    th {
+        border-bottom-width: 2px;
+    }
+
+    tr:last-child {
+        td {
+            border-bottom-width: 0;
+        }
+    }
+}
+
+.dataTable {
+    border-bottom: none !important;
+
+    thead > tr > th {
+        border-bottom: 2px solid #dee2e6 !important;
+    }
+}
+
+div.edit-delete-strikethrough {
+        border: solid 1px red;
+        background: gainsboro;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.dynamic-data-delete-button, .dynamic-data-new-delete-button, ._dynamic_new_ordersizeformdeletebutton {
+  margin-top: 2em;
+}
+
+.input-group .dynamic-data-new-delete-button{
+  margin-top: 0em !important;
+}

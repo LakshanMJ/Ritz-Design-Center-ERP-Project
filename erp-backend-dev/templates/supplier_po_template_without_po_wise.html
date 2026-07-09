@@ -1,0 +1,329 @@
+<style>
+    .right_allign{
+        text-align: right;
+    }
+    .square{
+        background-color: #fff;
+        border:solid 1px black;
+        padding:5px;
+    }
+    .border_top{
+        border-top:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_bottom{
+        border-bottom:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left{
+        border-left:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_right{
+        border-right:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left_right_only{
+        border_left;
+        border_right;
+        border-top: solid 1px white;
+        border-bottom: solid 1px white;
+    }
+    h6{
+        font-size: 30px;
+    }
+    li{
+        font-size:7px;
+    }
+    h1{
+        font-size: 10px;
+    }
+    @page {
+        size: a4 portrait;
+        @frame header_frame {           /* Static Frame */
+            -pdf-frame-content: header_content;
+            left: 50pt; width: 512pt; top: 50pt; height: 10pt;
+        }
+        @frame content_frame {          /* Content Frame */
+            left: 50pt; width: 512pt; top: 60pt; height: 662pt;
+        }
+        @frame footer_frame {           /* Another static Frame */
+            -pdf-frame-content: footer_content;
+            left: 50pt; width: 512pt; top: 200pt; height: 100pt;
+        }
+    }
+</style>
+<table width="100%">
+    <tr>
+        <td colspan="3"><center><h6>Purchase Order</h6></center></td>
+    </tr>
+    <tr>
+        <td width="20%"><img src="shared/static/images/ritz/RITZ-LOGO.jpg"></td>
+        <td width="1%"></td>
+        <td>
+            <table class="right_allign">
+                <tr>
+                    <td>
+                        <h4>{{ritz_details.billing_location_name}}.</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ritz_details.billing_address_line_1}}, {{ritz_details.billing_address_line_2}},
+                    </td>
+                </tr>
+                <tr>
+                    <td >
+                        {{ritz_details.billing_address_city}}.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ritz_details.billing_address_country_name}}.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>VAT Reg. No. :</b> {{ritz_details.ritz_vat_reg_number}}  <b>/ SVAT Reg. No. :</b> {{ritz_details.ritz_svat_reg_number}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>BOI Registration No. :</b> {{ritz_details.ritz_boi_registration_number}}  <b>Warehouse Code. :</b> {{ritz_details.ritz_warehouse_code}}
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<br>
+<table width="100%">
+    <tr>
+        <td width="45%">
+            <div class="square">
+                Supplier info<br>
+                Company Name    : {{supplier_details.supplier_company_name}}<br>
+                Address         : {{supplier_details.supplier_address}}<br>
+                Attention       : {{supplier_details.supplier_attention}}
+            </div>
+        </td>
+        <td>
+        </td>
+        <td width="45%">
+            <div class="square">
+                Ship to info<br>
+                Company Name    : {{ritz_details.ritz_company_name}}<br>
+                Address         : {{ritz_details.ritz_address}}<br>
+                Attention       : {{ritz_details.ritz_attention}}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="border_top border_bottom" >
+                <table width="100%" cellpadding="5">
+                    <tr>
+                        <td class="border_left" width="65%">
+                            Email: {{supplier_details.supplier_email}}
+                        </td>
+                        <td class="border_right" width="35%">
+                            Contact #: {{supplier_details.supplier_contact_number}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td>
+        </td>
+        <td>
+            <div class="border_top border_bottom" >
+                <table width="100%" cellpadding="5">
+                    <tr>
+                        <td class="border_left" width="55%" >
+                            Email: {{ritz_details.ritz_email}}
+                        </td>
+                        <td class="border_right" width="45%">
+                            Contact #: {{ritz_details.ritz_contact_number}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+<br>
+<table width="100%" border="1" cellspacing="1" cellpadding="5">
+    <tr>
+        <td width="33%">
+            Customer : {{general_information.customer}}
+        </td>
+        <td width="34%">
+            Terms of Delivery : {{general_information.terms_of_delivery}}
+        </td>
+        <td width="33%">
+            Date : {{general_information.date}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Style #: {{general_information.style_number}}
+        </td>
+        <td>
+            Delivery Mode : {{general_information.delivery_mode}}
+        </td>
+        <td>
+            Prepared By : {{general_information.prepared_by}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Order No : {{general_information.order_number}}
+        </td>
+        <td>
+            Payment Terms : {{general_information.payment_terms}}
+        </td>
+        <td>
+            Checked By : {{general_information.checked_by}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Buyer P/O No : {{general_information.po_number}}
+        </td>
+        <td>
+            Method of Payment : {{general_information.method_of_payment}}
+        </td>
+        <td rowspan="2">
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            PO No : {{general_information.pr_number}}
+        </td>
+        <td>
+            Currency : {{general_information.currency}}
+        </td>
+    </tr>
+</table>
+<br>
+<font size="2"><table width="100%" border="0.5" cellspacing="0" cellpadding="5" repeat="1">
+    <tr>
+        <th scope="col">Material Type</th>
+        <th scope="col">Item Code</th>
+        <th scope="col">Item Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Required Del Date</th>
+        <th scope="col">Unit Price({{general_information.currency}}) (Discount%)</th>
+        <th scope="col">Value</th>
+    </tr>
+    {% for delivery_date, delivery_data in delivery_instructions.items %}
+        {% for item_code, item_data in delivery_data.delivery_data.items %}
+            <tr>
+                <td>{{item_data.material_type}}</td>
+                {% if item_data.size_dependent %}
+                    <td></td>
+                {% else %}
+                    <td>{{item_data.item_code}}</td>
+                {% endif %}
+                <td width="25%" style="line-height: auto;">{{ item_data.item_data.item_description }}</td>
+                <td>{{item_data.item_data.quantity}} {{item_data.item_data.unit}}</td>
+                <td>{{delivery_data.delivery_date}}</td>
+                {% if item_data.item_data.discount > 0 %}
+                    <td>{{item_data.item_data.unit_price}} {{item_data.item_data.costing_unit}} ({{ item_data.item_data.discount }}%)</td>
+                {% else %}
+                    <td>{{item_data.item_data.unit_price}} {{item_data.item_data.costing_unit}}</td>
+                {% endif %}
+                <td>{{item_data.item_data.value_after_discount}} {{general_information.currency}}</td>
+            </tr>
+            {% if item_data.size_dependent %}
+                <tr>
+                    <td colspan="7">
+                    <table border="0.5" width="70%" cellpadding="5">
+                        <tr>
+                            <th style="font-size: 8px;">Item Code</th>
+                            <th style="font-size: 8px;">Size</th>
+                            <th style="font-size: 8px;">Quantity</th>
+                        </tr>
+                        {% for size_details in item_data.size_data %}
+                            <tr>
+                                <td style="font-size: 8px;">{{size_details.item_code}}</td>
+                                <td style="font-size: 8px;">{{size_details.size}}</td>
+                                <td style="font-size: 8px;">{{size_details.quantity}} {{size_details.unit}}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</table></font>
+<br>
+<table width="100%">
+    <td width="50%">
+        <div class="square">
+            Remarks <br> {{remarks}}
+        </div>
+    </td>
+    <td>
+    </td>
+    <td width="30%">
+        <table width="100%" class="square">
+            <tr>
+                <td width="50%">
+                    Total
+                </td>
+                <td>
+                    {{general_information.total}} {{general_information.currency}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Discount
+                </td>
+                <td>
+                    {{general_information.discount}}%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Total after disc.
+                </td>
+                <td>
+                    {{general_information.total_after_discount}} {{general_information.currency}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Grand Total
+                </td>
+                <td>
+                    {{general_information.grand_total}} {{general_information.currency}}
+                </td>
+            </tr>
+        </table>
+    </td>
+</table>
+<br>
+<h1><u>Terms & Conditions</u></h1>
+<div id = "bottom">
+    <ol>
+        <li>The Supplier must forward a porforma invoice accepting the order withing two working days and stricly adhere to the terms and conditions relating to price, delivery and packaging stipulated herein.</li>
+        <li>The description, quantity and any technical specification for the goods shall be those set out in the above order, and shall not be deviated and/or amended in any manner without a prior written approval of the Purchaser.</li>
+        <li>Unless otherwise agreed in writing by the purchaser and the supplier, failure on the part of the supplier to meet the deadlines, the Supplier will be liable for any costs including the cost of airfreight, if any, that arise as a result of late delivery. The Supplier here by agrees to indemnify and hold harmless the Purchaser against any losses or claims arising as a result of such delay.</li>
+        <li>Goods delivered exceeding the stipulated tolerance level, will not be returned or paid.</li>
+        <li>The Supplier shall not use any metal nails, pins, clips, staples or like material for the purpose of packing.</li>
+        <li>The Supplier shall submit originals of all mandatory laboratory test reports and shipping samples as required by the Purchaser, before any bulk shipment is affected.</li>
+        <li>The Purchase Order number and material number (or its equivalent) must be mentioned on all documents sent by the Supplier.</li>
+        <li>Upon Delivery of the order, the Purchaser shall have the right to reject the order in relation to the quantity and quality issues of the goods delivered at any time. The Purchaser shall neither be liable to return any rejected quantities to the Supplier nor required to pay for same. The Supplier may be required to replenish quantities rejected and should do so within the timelines given by the Purchaser.</li>
+        <li>Payment will be made on the agreed payment terms and in the currency stipulated in the Purchase Order.If the payment term is under irrevocable letter of credit, All LC terms and conditions should be pre agreed & acceptable.All bank charges outside Sri Lanka should be on beneficiary’s account including amendments charges.</li>
+        <li>Relevant HS Code per item should be marked in the Description column on the Commercial Invoice. Item Description should be clearly indicated on the Invoice. Actual carton dimensions Gross weight/ Net weight/ Volume weight should be clearly marked on the Invoice & P/L. Shipping documents should be as.</li>
+        <li>Shipping/Delivery authorization must be obtained from the purchaser (from relevant merchandiser) prior to proceed with any shipment/Delivery. Scan copies of complete set of shipping docs (CI,PL,BL) should send via email immediately after ETD. Hard copies must reach the purchaser via currier within 7-10 days of ETD. If the above is not fulfilled there will be charge back of $75 per shipment and demurrages if any.</li>
+    </ol>
+</div>

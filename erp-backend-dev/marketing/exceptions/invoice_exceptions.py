@@ -1,0 +1,3 @@
+
+class InvoiceMismatchException(Exception):
+    pass

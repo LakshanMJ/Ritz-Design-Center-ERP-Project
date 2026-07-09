@@ -1,0 +1,11 @@
+{% extends "email_base_template.html" %}
+{% load shared_tags %}
+
+{%  block email_content %}
+    <div style="margin-top: 0px">
+        Please review and complete the CAD data.
+        <br />
+        <br />
+        <b>CAD data enter list</b>: {{ url }}.
+    </div>
+{% endblock %}

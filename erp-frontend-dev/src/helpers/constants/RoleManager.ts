@@ -1,0 +1,16 @@
+export const MERCHANT = "MERCHANT"
+export const MERCHANT_ADMIN = "MERCHANT_ADMIN"
+export const TRANSPORT_ADMIN = "TRANSPORT_ADMIN"
+export const TRANSPORT_USER = "TRANSPORT_USER"
+export const ADMIN = "ADMIN"
+export const IE_USER = "IE_USER"
+export const CAD_USER_ROLE = 'CAD_USER'
+export const BUSINESS_ADMIN = 'BUSINESS_ADMIN'
+export const FABRIC_INSPECTOR = 'FABRIC_INSPECTOR'
+export const GRN_CLERK = 'GRN_CLERK'
+export const GRN_ADMIN = 'GRN_ADMIN'
+export const GRN_MANAGER = 'GRN_MANAGER'
+export const STORE_ADMIN = 'STORE_ADMIN'
+export const CAD_ADMIN = 'CAD_ADMIN'
+export const FINANCE_ADMIN = 'FINANCE_ADMIN'
+export const FINANCE_USER = 'FINANCE_USER'

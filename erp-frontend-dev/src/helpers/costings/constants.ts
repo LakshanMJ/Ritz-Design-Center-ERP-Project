@@ -1,0 +1,9 @@
+
+export const ITEM_CW_LEVEL = 'itemcolorway'
+export const ITEM_CW_COUNTRY_FABRICS_LEVEL = 'itemcolorwaycountry'
+export const ITEM_CW_COUNTRY_SIZE_FABRICS_LEVEL = 'itemcolorwaycountrysize'
+
+export const FABRIC_MATERIAL_TYPE = 'FABRIC_MATERIAL_TYPE'
+export const TRIM_MATERIAL_TYPE = 'TRIM_MATERIAL_TYPE'
+export const EMBPRINTWASH_MATERIAL_TYPE = 'EMBPRINTWASH_MATERIAL_TYPE'
+export const PACKAGING_MATERIAL_TYPE = 'PACKAGING_MATERIAL_TYPE'

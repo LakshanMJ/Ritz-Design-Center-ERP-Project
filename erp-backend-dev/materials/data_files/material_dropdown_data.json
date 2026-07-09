@@ -1,0 +1,278 @@
+[
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "95% CMIA COTTON 5% LYCRA",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% COTTON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "65% Polyester 35% Cotton",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "95% COTTON 5% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "96% COTTON 4% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% VISCOSE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% COMPACT COMBED COTTON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "95% COMPACT COMBED COTTON + 5% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "98% POLYESTER 2% SPANDEX",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "70% COMPACT COMBED COTTON 30% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "48% LYOCELL TENCEL 47% COTTON 5% ELASTANE LYCRA",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "2x2 RIB 95% BCI COTTON 5% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": " 60% COTTON 40% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "97% SUPIMA COTTON 3% ELASTINE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% CMIA COTTON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "50% COTTON 50% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "82% VISCOSE 18% POLYAMIDE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% BCI COTTON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "85% BCI COTTON 15% RECYCLE POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "85% BCI COTTON 50% RECYCLE POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "90% COTTON 10% VISCOSE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "54% COTTON 46% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% PES",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "75% POLYESTER 13% COTTON 12% RAYON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "98% BCI COTTON 2% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "92% BCI COTTON 8% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "56% COTTON 37% POLYESTER 7% SPANDEX",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "60% COTTON 40% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "80% COTTON 20% POLYESTER",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "100% SUPIMA COTTON",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "95% BCI COTTON 5% ELASTANE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "95% GOTS COTTON 5% LYCRA",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "63% COTTON 37% VISCOSE",
+        "attribute_id": 1
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "1X1 RIB",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "2X2 RIB",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Interlining",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Tri Cot",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Single Jersey",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "fleece",
+        "display_value": "Fleece",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Non Woven",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Woven",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "BRUSHED BACK",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "Quilted",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "PIQUE",
+        "attribute_id": 5
+    },
+    {
+        "material": "fabric",
+        "value": "",
+        "display_value": "KNITTED",
+        "attribute_id": 5
+    }
+]

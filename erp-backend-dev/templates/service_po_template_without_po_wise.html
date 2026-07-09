@@ -1,0 +1,245 @@
+<style>
+    .square{
+        background-color: #fff;
+        border:solid 1px black;
+        padding:5px;
+    }
+    .border_top{
+        border-top:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_bottom{
+        border-bottom:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left{
+        border-left:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_right{
+        border-right:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left_right_only{
+        border_left;
+        border_right;
+        border-top: solid 2px white;
+        border-bottom: solid 2px white;
+    }
+    h6{
+        font-size: 30px;
+    }
+    li{
+        font-size:7px;
+    }
+    h1{
+        font-size: 10px;
+    }
+    @page {
+        size: a4 portrait;
+        @frame header_frame {           /* Static Frame */
+            -pdf-frame-content: header_content;
+            left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+        }
+        @frame content_frame {          /* Content Frame */
+            left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+        }
+        @frame footer_frame {           /* Another static Frame */
+            -pdf-frame-content: footer_content;
+            left: 50pt; width: 512pt; top: 200pt; height: 100pt;
+        }
+    }
+</style>
+<table>
+    <tr>
+        <td>
+            <img src="shared/static/images/ritz/RITZ-LOGO.jpg">
+        </td>
+        <td>
+            <center><h6>Service Order</h6></center>
+        </td>
+        <td>
+            <div style="text-align: right;">
+                <b><h1>{{general_information.billing_location_name}}</h1></b>
+                {{general_information.billing_address_line_1}}, {{general_information.billing_address_line_2}}<br>
+                {{general_information.billing_city}},<br>
+                {{general_information.billing_country}}<br>
+                Tel: {{general_information.billing_phone_number}}
+            </div>
+        </td>
+    </tr>
+</table>
+<br>
+<table width="100%" border="1" cellspacing="1" cellpadding="5">
+    <tr>
+        <td width="50%" rowspan="3">
+            <b>Supplier: </b>{{supplier_details.name}}<br>
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Address: {{supplier_details.address_line_1}}, {{supplier_details.address_line_2}}, {{supplier_details.city}}, {{supplier_details.country}}
+        </td>
+        <td width="25%">
+            <b>Date:</b> {{general_information.date}}
+        </td>
+        <td width="25%">
+            <b>S/O No:</b> {{service_order_number}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Payment Terms:</b>
+        </td>
+        <td>
+            {{general_information.payment_term}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Prepared By: </b> {{general_information.prepared_by}}
+        </td>
+        <td>
+            <b>Checked By: </b> {{general_information.checked_by}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <table width="100%">
+                <td width="25%">
+                    <b>Attention:</b> {{supplier_details.attention}}
+                </td>
+                <td width="25%">
+                </td>
+                <td width="25%">
+                    <b>Contact No:</b> {{supplier_details.contact_number}}
+                </td>
+                <td width="25%">
+                </td>
+            </table>
+        </td>
+        <td>
+            <b>Print Status:</b>  Original Print
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Style & Season:</b> {{general_information.style}}<br>
+            <b>Order No:</b> {{general_information.order_number}}
+        </td>
+        <td>
+            <b>VAT Reg No:</b> {{general_information.value_added_tax_registration_number}}
+        </td>
+        <td>
+            <b>SVAT Reg No:</b> {{general_information.simplified_value_added_tax_registration_number}}
+        </td>
+    </tr>
+</table>
+<br>
+<font size="2"><table width="100%" border="1" cellspacing="1" cellpadding="5" repeat="1">
+      <tr>
+        <th scope="col"  width = "20%">Service Category</th>
+        <th scope="col"  width = "20%">Service Description</th>
+        <th scope="col">Req Date</th>
+        <th scope="col">Unit</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price(USD)</th>
+        <th scope="col">Value(USD)</th>
+      </tr>
+      
+      {% for service_description, service_categories in table_data.items %}
+        {% for service_category, deliveries in service_categories.data.items %}
+            {% for delivery, delivery_details in deliveries.data.items %}
+                <tr>
+                    <td>
+                        {{service_description}}
+                    </td>
+                    <td>
+                        {{service_category}}
+                    </td>
+                    <td>
+                        {{delivery}}
+                    </td>
+                    <td>
+                        {{delivery_details.unit}}
+                    </td>
+                    <td>
+                        {{delivery_details.total_quantity}}
+                    </td>
+                    <td>
+                        {{delivery_details.price}}
+                    </td>
+                    <td>
+                        {{delivery_details.total_value}}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+      {% endfor %}
+</table></font>
+<br>
+<table width="100%">
+    <td width="30%">
+        <div class="square">
+            Remarks
+        </div>
+    </td>
+    <td>
+    </td>
+    <td width="30%">
+        <table width="100%" class="square">
+            <tr>
+                <td width="50%">
+                    Total
+                </td>
+                <td>
+                    {{total_price}} USD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Discount
+                </td>
+                <td>
+                    {{discount_percentage}}%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Total after disc.
+                </td>
+                <td>
+                    {{total_price_after_discount}} USD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Grand Total
+                </td>
+                <td>
+                    {{total_price_after_discount}} USD
+                </td>
+            </tr>
+        </table>
+    </td>
+</table>
+<br>
+<h1><u>Terms & Conditions</u></h1>
+<div id = "bottom">
+    <ol>
+        <li>The Supplier must forward a porforma invoice accepting the order withing two working days and stricly adhere to the terms and conditions relating to price, delivery and packaging stipulated herein.</li>
+        <li>The description, quantity and any technical specification for the goods shall be those set out in the above order, and shall not be deviated and/or amended in any manner without a prior written approval of the Purchaser.</li>
+        <li>Unless otherwise agreed in writing by the purchaser and the supplier, failure on the part of the supplier to meet the deadlines, the Supplier will be liable for any costs including the cost of airfreight, if any, that arise as a result of late delivery. The Supplier here by agrees to indemnify and hold harmless the Purchaser against any losses or claims arising as a result of such delay.</li>
+        <li>Goods delivered exceeding the stipulated tolerance level, will not be returned or paid.</li>
+        <li>The Supplier shall not use any metal nails, pins, clips, staples or like material for the purpose of packing.</li>
+        <li>The Supplier shall submit originals of all mandatory laboratory test reports and shipping samples as required by the Purchaser, before any bulk shipment is affected.</li>
+        <li>The Purchase Order number and material number (or its equivalent) must be mentioned on all documents sent by the Supplier.</li>
+        <li>Upon Delivery of the order, the Purchaser shall have the right to reject the order in relation to the quantity and quality issues of the goods delivered at any time. The Purchaser shall neither be liable to return any rejected quantities to the Supplier nor required to pay for same. The Supplier may be required to replenish quantities rejected and should do so within the timelines given by the Purchaser.</li>
+        <li>Payment will be made on the agreed payment terms and in the currency stipulated in the Purchase Order.If the payment term is under irrevocable letter of credit, All LC terms and conditions should be pre agreed & acceptable.All bank charges outside Sri Lanka should be on beneficiary’s account including amendments charges.</li>
+        <li>Relevant HS Code per item should be marked in the Description column on the Commercial Invoice. Item Description should be clearly indicated on the Invoice. Actual carton dimensions Gross weight/ Net weight/ Volume weight should be clearly marked on the Invoice & P/L. Shipping documents should be as.</li>
+        <li>Shipping/Delivery authorization must be obtained from the purchaser (from relevant merchandiser) prior to proceed with any shipment/Delivery. Scan copies of complete set of shipping docs (CI,PL,BL) should send via email immediately after ETD. Hard copies must reach the purchaser via currier within 7-10 days of ETD. If the above is not fulfilled there will be charge back of $75 per shipment and demurrages if any.</li>
+    </ol>
+</div>

@@ -1,0 +1,146 @@
+[
+    {
+        "name": "Single Needle Under Bed Trimer",
+        "short_name": "SNUBT"
+    },
+    {
+        "name": "4 Thread Over Lock Sanken Bed",
+        "short_name": "4THOLSB"
+    },
+    {
+        "name": "Single Needle Lock Stitch Cutter Under Bed Trimer",
+        "short_name": "SNCUBT"
+    },
+    {
+        "name": "Double Needle Lock Stitch  Under Bed Trimmer",
+        "short_name": "DNLSUBT"
+    },
+    {
+        "name": "Double Needle Chine Stitch",
+        "short_name": "DNCS"
+    },
+    {
+        "name": "Multi Needle Cylinder Bed (KANSAI)",
+        "short_name": "MNCB"
+    },
+    {
+        "name": "Smoking Machine",
+        "short_name": "SMOKING"
+    },
+    {
+        "name": "4 Thread Over Lock Cylinder Bed",
+        "short_name": "4THOLCB"
+    },
+    {
+        "name": "4 Thread Over Lock Small Cylinder Bed",
+        "short_name": "4THOLSCB"
+    },
+    {
+        "name": "5 Thread Over Lock Sunken Bed",
+        "short_name": "5THOLSB"
+    },
+    {
+        "name": "Over Lock Back Puller",
+        "short_name": "OLBP"
+    },
+    {
+        "name": "Cut & Re Enter",
+        "short_name": "CRE"
+    },
+    {
+        "name": "Flat Lock Cylinder Bed",
+        "short_name": "FLCB"
+    },
+    {
+        "name": "Flat Lock Small Cylinder Bed",
+        "short_name": "FLSCB"
+    },
+    {
+        "name": "Flat lock Flat Bed",
+        "short_name": "FLFB"
+    },
+    {
+        "name": "Flat Lock Hem Left Side Cutter",
+        "short_name": "FLHLSC"
+    },
+    {
+        "name": "Flat Lock Hem Right Side Cutter",
+        "short_name": "FLHRSC"
+    },
+    {
+        "name": "Flat Lock Right Side Cutter Flat Bed",
+        "short_name": "FLRSCFB"
+    },
+    {
+        "name": "Flat Lock Left Side Cutter Flat Bed",
+        "short_name": "FLLSCFB"
+    },
+    {
+        "name": "Flat Lock Cylinder Bed Back  Puller",
+        "short_name": "FLCBBP"
+    },
+    {
+        "name": "Flat Lock Right Side Cutter Ring Attach",
+        "short_name": "FLRSCRA"
+    },
+    {
+        "name": "Flat Lock Left Side Cutter Ring Attach",
+        "short_name": "FLLSCRA"
+    },
+    {
+        "name": "Flat Lock Binding",
+        "short_name": "FLBN"
+    },
+    {
+        "name": "Ringer",
+        "short_name": "RINGER"
+    },
+    {
+        "name": "Button Hole",
+        "short_name": "BH"
+    },
+    {
+        "name": "Bar Tack",
+        "short_name": "BT"
+    },
+    {
+        "name": "Button attach",
+        "short_name": "BA"
+    },
+    {
+        "name": "Flat Seam",
+        "short_name": "FS"
+    },
+    {
+        "name": "Pattern Shower",
+        "short_name": "PLK"
+    },
+    {
+        "name": "Zig Zag",
+        "short_name": "ZZ"
+    },
+    {
+        "name": "Snap Button",
+        "short_name": "SB"
+    },
+    {
+        "name": "Pad Printers",
+        "short_name": "PP"
+    },
+    {
+        "name": "Heat Seal",
+        "short_name": "HS"
+    },
+    {
+        "name": "Heat Seal Double Bed",
+        "short_name": "HSDB"
+    },
+    {
+        "name": "Iron",
+        "short_name": "IRON"
+    },
+    {
+        "name": "Ultra sonic heat cutter",
+        "short_name": "USHC"
+    }
+]

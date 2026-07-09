@@ -1,0 +1,530 @@
+[
+    {
+        "name": "Born In Sleep Suit",
+        "code": "BISSM",
+        "brand": "Matalan",
+        "customer": "Matalan",
+        "attributes": [
+            {
+                "placement": "Body",
+                "type": "fabric",
+                "assign_type": "orderpackitem",
+                "material": "fabric",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Interlining",
+                "type": "fabric",
+                "assign_type": "orderpackitem",
+                "material": "fabric",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Tricort",
+                "type": "fabric",
+                "assign_type": "orderpackitem",
+                "material": "fabric",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Thread 1",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Thread 2",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Thread 3",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Mobilon",
+                "type": "mobilon",
+                "assign_type": "orderpackitem",
+                "material": "mobilon",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Poppers",
+                "type": "popper",
+                "assign_type": "orderpackitem",
+                "material": "popper",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Care Label",
+                "type": "care_label",
+                "assign_type": "orderpackitem",
+                "material": "care_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Elastic",
+                "type": "elastic",
+                "assign_type": "orderpackitem",
+                "material": "elastic",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Woven Label",
+                "type": "woven_label",
+                "assign_type": "orderpackitem",
+                "material": "woven_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hanger",
+                "type": "hanger",
+                "assign_type": "orderpack",
+                "material": "hanger",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Carton",
+                "type": "carton",
+                "assign_type": "orderpack",
+                "material": "carton",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Over Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Box End Label",
+                "type": "box_end_label",
+                "assign_type": "orderpack",
+                "material": "box_end_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pcs",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Poly Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Inner Label",
+                "type": "inner_label",
+                "assign_type": "orderpack",
+                "material": "inner_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Tag Pin",
+                "type": "tag_pin",
+                "assign_type": "orderpack",
+                "material": "tag_pin",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hook Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Benifits Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "RFID Sticker",
+                "type": "rfid_sticker_tag",
+                "assign_type": "orderpack",
+                "material": "rfid_sticker_tag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            }
+        ]
+    },
+    {
+        "name": "Children PJ Top",
+        "code": "CCPT",
+        "brand": "Matalan",
+        "customer": "Matalan",
+        "attributes": [
+            {
+                "placement": "Thread 1",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Thread 2",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Main Label",
+                "type": "main_label",
+                "assign_type": "orderpackitem",
+                "material": "main_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Care Label",
+                "type": "care_label",
+                "assign_type": "orderpackitem",
+                "material": "care_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Woven Label",
+                "type": "woven_label",
+                "assign_type": "orderpackitem",
+                "material": "woven_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Mobilon Tape",
+                "type": "mobilon",
+                "assign_type": "orderpackitem",
+                "material": "mobilon",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Elastic",
+                "type": "elastic",
+                "assign_type": "orderpackitem",
+                "material": "elastic",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hanger",
+                "type": "hang_tag",
+                "assign_type": "orderpack",
+                "material": "hang_tag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Price Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Carton",
+                "type": "carton",
+                "assign_type": "orderpack",
+                "material": "carton",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Over Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Box End Label",
+                "type": "box_end_label",
+                "assign_type": "orderpack",
+                "material": "box_end_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pcs",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Poly Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Cad Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Tag Pin",
+                "type": "tag_pin",
+                "assign_type": "orderpack",
+                "material": "tag_pin",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hook Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "RIFD Sticker",
+                "type": "rfid_sticker_tag",
+                "assign_type": "orderpack",
+                "material": "rfid_sticker_tag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            }
+        ]
+    },
+    {
+        "name": "Children PJ Pant",
+        "code": "CCPP",
+        "brand": "Matalan",
+        "customer": "Matalan",
+        "attributes": [
+            {
+                "placement": "Thread 1",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Thread 2",
+                "type": "thread",
+                "assign_type": "orderpackitem",
+                "material": "thread",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Meters",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Main Label",
+                "type": "main_label",
+                "assign_type": "orderpackitem",
+                "material": "main_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Care Label",
+                "type": "care_label",
+                "assign_type": "orderpackitem",
+                "material": "care_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Woven Label",
+                "type": "woven_label",
+                "assign_type": "orderpackitem",
+                "material": "woven_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Mobilon Tape",
+                "type": "mobilon",
+                "assign_type": "orderpackitem",
+                "material": "mobilon",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Elastic",
+                "type": "elastic",
+                "assign_type": "orderpackitem",
+                "material": "elastic",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Metres",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hanger",
+                "type": "hanger",
+                "assign_type": "orderpack",
+                "material": "hanger",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Price Sticker",
+                "type": "price_sticker",
+                "assign_type": "orderpack",
+                "material": "price_sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Carton",
+                "type": "carton",
+                "assign_type": "orderpack",
+                "material": "carton",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Over Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Box End Label",
+                "type": "box_end_label",
+                "assign_type": "orderpack",
+                "material": "box_end_label",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pcs",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Poly Bag",
+                "type": "poly_bag",
+                "assign_type": "orderpack",
+                "material": "poly_bag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Cad Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Tag Pin",
+                "type": "tag_pin",
+                "assign_type": "orderpack",
+                "material": "tag_pin",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Hook Sticker",
+                "type": "sticker",
+                "assign_type": "orderpack",
+                "material": "sticker",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "RIFD Sticker",
+                "type": "rfid_sticker_tag",
+                "assign_type": "orderpack",
+                "material": "rfid_sticker_tag",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            },
+            {
+                "placement": "Body Card",
+                "type": "others",
+                "assign_type": "orderpack",
+                "material": "draw_cord",
+                "estimated_consumption_ratio": 1.0,
+                "estimated_consumption_ratio_units": "Pieces",
+                "is_mandatory": true
+            }
+        ]
+    }
+]

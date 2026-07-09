@@ -1,0 +1,219 @@
+{% load custom_filters %}
+<style>
+    .square{
+        
+        border:solid 1px black;
+        padding: 2px;
+        
+    }
+    .border_top{
+        border-top:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_bottom{
+        border-bottom:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left{
+        border-left:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_right{
+        border-right:solid 1px black;
+        background-color: #fff;
+        padding:2px;
+    }
+    .border_left_right_only{
+        border_left;
+        border_right;
+        border-top: solid 2px white;
+        border-bottom: solid 2px white;
+    }
+    h6{
+        font-size: 30px;
+    }
+    li{
+        font-size:7px;
+    }
+    h1{
+        font-size: 10px;
+    }
+    @page {
+        size: a4 portrait;
+        @frame header_frame {           /* Static Frame */
+            -pdf-frame-content: header_content;
+            left: 50pt; width: 512pt; top: 50pt; height: 40pt;
+        }
+        @frame content_frame {          /* Content Frame */
+            left: 50pt; width: 512pt; top: 90pt; height: 632pt;
+        }
+        @frame footer_frame {           /* Another static Frame */
+            -pdf-frame-content: footer_content;
+            left: 50pt; width: 512pt; top: 200pt; height: 100pt;
+        }
+    }
+</style>
+<table>
+    <tr>
+        <td width="20%"><img src="shared/static/images/ritz/RITZ-LOGO.jpg"></td>
+        <td width="60%"><center>
+                <table>
+                    <tr>
+                        <td>{{company_details.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{company_details.address}}</td>
+                    </tr>
+                    <tr>
+                        <td>Tes: {{company_details.contact_number}} Email: {{company_details.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>VAT No: {{company_details.vat_number}} / SVAT No: {{company_details.svat_number}}</td>
+                    </tr>
+                    <tr>
+                        <td>BOI Registration: {{company_details.boi_registration}} Warehouse Code: {{company_details.warehouse_code}}</td>
+                    </tr>
+                </table>
+                <h6>Purchasing Debit Note</h6>
+            </center></td>
+        <td width="20%"></td>
+    </tr>
+</table>
+<br>
+<table width="100%" border="0.5">
+    <tr>
+        <td width="50%">
+            <table>
+                <tr>
+                    <td> </td>
+                    <td>&nbsp;</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td width="1%"></td>
+                    <td width="25%">Supplier info</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Company Name</td>
+                    <td>{{supplier_details.supplier_name}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Address</td>
+                    <td>{{supplier_details.address}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Contact Person</td>
+                    <td>{{supplier_details.contact_person}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Contact number</td>
+                    <td>{{supplier_details.contact_number}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Email</td>
+                    <td>{{supplier_details.email}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Invoice</td>
+                    <td>{{supplier_details.invoice}}</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>&nbsp;</td>
+                    <td> </td>
+                </tr>
+            </table>
+        </td>
+        <td width="50%">
+            <table>
+                <tr height="1%">
+                    <td> </td>
+                    <td>&nbsp;</td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td width="1%"></td>
+                    <td width="35%">Date</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Debit Note Number</td>
+                    <td>{{general_details.debit_note_number}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Goods Return Location</td>
+                    <td>{{general_details.goods_return_location.name}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>{{general_details.goods_return_location.address}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Contact Person:{{general_details.goods_return_location.contact_number}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Contact Number : {{general_details.goods_return_location.contact_number}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Email : {{general_details.goods_return_location.email}}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Buyer</td>
+                    <td>{{general_details.buyer}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br>
+{% for name, material in material_details.items %}
+    <b>{{material.display_name}}</b>
+    <table width="100%" border="0.5" cellspacing="1" cellpadding="5" repeat="1">
+        <tr>
+            {% for header in material.headers %}
+                <th width={{header.width}}>
+                    <center>{{header.display_name}}</center>
+                </th>
+            {% endfor %}
+        </tr>
+        {% for data in material.data %}
+            <tr>
+                {% for header in material.headers %}
+                    <td>
+                        {% if header.name == "item_description" %}
+                            {% for item_description in data|get_item:header.name %}
+                                <b>{{item_description.label}}:</b> {{item_description.value}}<br>
+                            {% endfor %}
+                        {% elif header.name == "quantity" %}
+                            <center>{{data|get_item:header.name|get_item:"quantity"}} {{data|get_item:header.name|get_item:"quantity_units_display"}}</center>
+                        {% elif header.name == "value" %}
+                            <center>{{data|get_item:header.name|get_item:"amount"}} {{data|get_item:header.name|get_item:"amount_currency_display"}}</center>
+                        {% else %}
+                            <center>{{data|get_item:header.name}}</center>
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endfor %}

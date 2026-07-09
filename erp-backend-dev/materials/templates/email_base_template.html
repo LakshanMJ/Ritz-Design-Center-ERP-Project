@@ -1,0 +1,56 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+    #outlook a {
+        padding: 0;
+    }
+
+    body {
+        width: 100% !important;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* force default font sizes */
+    .ExternalClass {
+        width: 100%;
+    }
+
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+        line-height: 100%;
+    }
+
+    /* Hotmail */
+    table td {
+        border-collapse: collapse;
+    }
+
+    @media only screen and (min-width: 600px) {
+        .maxW {
+            width: 600px !important;
+        }
+    }
+</style>
+<body>
+    <div style="">
+        <p>Dear User,</p>
+        <!--<div style="font-family: Verdana, Geneva, Helvetica, Arial, sans-serif; font-size: 24px; color: #353535; padding:1%; padding-top:40px; padding-bottom:10px;">
+            Ritz Clothing
+        </div> -->
+        <div style="padding:1%;">
+        {%  block email_content %}
+
+        {% endblock %}
+        <br /><br />
+        <img src="cid:RITZ-LOGO.jpg" />
+        </div>
+    </div>
+</body>
