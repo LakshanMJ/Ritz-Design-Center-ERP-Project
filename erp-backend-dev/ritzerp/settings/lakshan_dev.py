@@ -1,4 +1,5 @@
 from .base import *
+import dj_database_url
 import os
 
 # DATABASES = {
@@ -12,16 +13,27 @@ import os
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT', '5432'),
+if os.environ.get("DATABASE_URL"):
+    # Render / Neon
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=os.environ["DATABASE_URL"],
+            conn_max_age=600,
+            ssl_require=True,
+        )
     }
-}
+else:
+    # Local PostgreSQL
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.getenv("DB_NAME"),
+            "USER": os.getenv("DB_USER"),
+            "PASSWORD": os.getenv("DB_PASSWORD"),
+            "HOST": os.getenv("DB_HOST"),
+            "PORT": os.getenv("DB_PORT", "5432"),
+        }
+    }
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.235.82.221', 'ec2-3-109-1-192.ap-south-1.compute.amazonaws.com', '*', '192.168.1.12','192.168.1.31']
 CORS_ALLOWED_ORIGINS = [
