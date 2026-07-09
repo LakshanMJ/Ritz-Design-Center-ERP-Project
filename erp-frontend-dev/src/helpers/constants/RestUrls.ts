@@ -1,5 +1,9 @@
 /* API BASE URL */
-export const apiBaseURL = () => `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_API_MODULE}/`;
+// export const apiBaseURL = () => `${process.env.NEXT_PUBLIC_API_URL}/${process.env.NEXT_PUBLIC_API_MODULE}/`;
+
+export const apiBaseURL = () =>
+  "https://nexa-erp-project.onrender.com/api/shared/";
+
 
 
 /* COSTING API URLS */
