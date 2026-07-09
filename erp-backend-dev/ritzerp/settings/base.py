@@ -1,6 +1,9 @@
 import datetime
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname((os.path.dirname(os.path.abspath(__file__)))))
@@ -14,7 +17,7 @@ SECRET_KEY = '1+96yzp()xvir%i*3wj9kq24q_rp3$0-cqcksl($y$3mpz0zm&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec2-3-109-1-192.ap-south-1.compute.amazonaws.com', 'localhost:8000']
+ALLOWED_HOSTS = ['your-backend-name.onrender.com', 'localhost:8000']
 
 
 # Application definition
