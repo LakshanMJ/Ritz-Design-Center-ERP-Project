@@ -14,8 +14,12 @@ declare module 'axios' {
     }
 }
 
+// const api = axios.create({
+//     baseURL: apiBaseURL()
+// });
+
 const api = axios.create({
-    baseURL: apiBaseURL()
+    baseURL: "https://nexa-erp-project.onrender.com/THIS_SHOULD_APPEAR/"
 });
 
 api.interceptors.request.use((config) => {
@@ -57,7 +61,7 @@ api.interceptors.response.use(
             logout();
             return Promise.reject(error);
         }
-        
+
         if (status === 401 && data?.code === ACCESS_TOKEN_EXPIRED && !errorConfig._retry) {
             errorConfig._retry = true;
 
@@ -129,7 +133,13 @@ export const logout = () => {
 
 export const login = async (username: string, password: string) => {
     try {
-        const resp = await api.post('shared/user/authenticate/', { username: username, password: password });
+        // const resp = await api.post('shared/user/authenticate/', { username: username, password: password });
+
+        const resp = await api.post("HELLO_TEST/", {
+            username,
+            password,
+        });
+
         const respData = resp?.data || {};
 
         if (respData.access) {
