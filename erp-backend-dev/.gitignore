@@ -108,14 +108,7 @@ shared/static/CACHE
 shared/static/vendors/.DS_Store
 
 # settings file
-ritzerp/settings/aruna_base.py
 ritzerp/settings/settings.py
-ritzerp/settings/mahesh_dev.py
-ritzerp/settings/dhanushka_dev.py
-ritzerp/settings/lakshan_dev.py
-ritzerp/settings/anuja_base.py
-ritzerp/settings/Prem_base.py
-ritzerp/settings/nipuna_dev.py
 commands.txt
 /.idea/
 
