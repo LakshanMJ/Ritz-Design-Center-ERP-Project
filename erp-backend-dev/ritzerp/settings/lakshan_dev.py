@@ -36,10 +36,11 @@ else:
     }
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '13.235.82.221', 'ec2-3-109-1-192.ap-south-1.compute.amazonaws.com', '*', '192.168.1.12','192.168.1.31']
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://nexa-erp-project.vercel.app',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+#     'https://nexa-erp-project.vercel.app',
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
