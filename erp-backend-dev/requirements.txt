@@ -19,4 +19,3 @@ pytest-django
 model-bakery
 numpy
 pymupdf
-gunicorn
