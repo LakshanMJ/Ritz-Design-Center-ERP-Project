@@ -114,12 +114,13 @@ const CostingMaterialList = () => {
         console.log("Inside")
         Promise.all([
             api.get(RestUrls.customersURL()),
-            api.get(getActiveSuppliersURL()),
+            // api.get(getActiveSuppliersURL()),
             // api.get(getConsumptionUnits()),
             // api.get(getCostPerUnitTypesURL()),
             // api.get(getTransportTypesURL()),
             // api.get(paymentModesListURL()),
-        ]).then(([customers, suppliers, 
+        ]).then(([customers,
+            //  suppliers, 
             // consumptionUnits,
             //  costPerUnits, 
             //  transportTypes, 
