@@ -130,7 +130,7 @@ const CostingMaterialList = () => {
             setMetaData((prev: any) => ({
                 ...prev,
                 customers: customers.data,
-                suppliers: suppliers.data,
+                // suppliers: suppliers.data,
                 // consumptionUnits: consumptionUnits.data,
                 // costPerUnitTypes: costPerUnits.data,
                 // shipModes: transportTypes.data,
