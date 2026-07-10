@@ -71,7 +71,7 @@ const TransportRealTime = () => {
     const [vesselCutOffDatesModalOpen, setVesselCutOffDatesModalOpen] = useState(false);
     const [searchedText, setSearchedText] = useState('');
     const [currentPage, setCurrentPage] = useState(null);
-    const [rowsPerPage, setRowsPerPage] = useState(50);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     
     const getColumns = (tableType: string): ColumnDef<any>[] => [
         {
@@ -290,7 +290,7 @@ const fetchTransportDeliveryDateTrackingListData = (
     filter_type:any
 ) => {
     setIsLoading(true)
-    api.get(TransportUrls.transportDeliveryDateTrackingListUrl(transport_type,filter_type,searchedText,currentPage + 1,rowsPerPage > 50 ? rowsPerPage : 50))
+    api.get(TransportUrls.transportDeliveryDateTrackingListUrl(transport_type,filter_type,searchedText,currentPage + 1,rowsPerPage > 5 ? rowsPerPage : 5))
       .then((resp) => {
         const deliveriesData = resp?.data;
         updateTransportDeliveryDateTrackingData('transportDeliveryDateTrackingListData',deliveriesData.results)
@@ -443,7 +443,7 @@ useEffect(() => {
         fetchTransportDeliveryDateTrackingListData('',selectedDeliveryAndTransportStatus?.selectedDeliveryStatus)
     }
     setCurrentPage(null),
-    setRowsPerPage(50)
+    setRowsPerPage(5)
 }, [selectedDeliveryAndTransportStatus?.selectedDeliveryStatus])
 
 return(

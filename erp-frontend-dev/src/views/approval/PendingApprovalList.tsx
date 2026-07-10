@@ -22,15 +22,15 @@ const PendingApprovalList = ({ approvalType }: any) => {
   const [pendingApprovalList, setPendingApprovalList] = useState<any>([]);
   const [approvalEntityList, setApprovalEntityList] = useState<any>([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(50);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [searchedText, setSearchedText] = useState('');
   const [selectType, setSelectedType] = useState<any>('all');
   const [isLoadingCircularLoader, setIsLoadingCircularLoader] = useState(false);
 
   const fetchData = () => {
     const selectedListURL = approvalType == 'my_approval' ? 
-    myPendingApprovalListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all') : 
-    allPendingapprovalListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all')
+    myPendingApprovalListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all') : 
+    allPendingapprovalListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all')
 
     const requests = [
       api.get(selectedListURL),

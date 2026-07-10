@@ -33,13 +33,13 @@ const EditPCLInformation = ({ pclDetailId, currentState, startDate, endDate, mer
     const [pendingPCLPoClubList, setPendingPCLPoClubList] = useState<any>({})
     const [mergedPCLList, setMergedPCLList] = useState<any>([])
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(50);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     const [searchText, setSearchText] = useState('');
 
     const loadPendingPCList = () => {
         setIsLoadingPendingPoClubs(true)
         const requests = [
-            api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 50 ? rowsPerPage : 50, 0)),
+            api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 5 ? rowsPerPage : 5, 0)),
         ]
         Promise.all(requests).then(response => {
             const [pendingPCLPoClub] = response.map((r: any) => r.data);

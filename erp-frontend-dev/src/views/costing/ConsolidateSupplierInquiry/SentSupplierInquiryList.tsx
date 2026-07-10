@@ -46,7 +46,7 @@ const SentSupplierInquiryList = () => {
 
     // Table states
     const [pageIndex, setPageIndex] = useState(0);
-    const [pageSize, setPageSize] = useState(50);
+    const [pageSize, setPageSize] = useState(5);
     const [totalCount, setTotalCount] = useState(0);
     const [sorting, setSorting] = useState({});
     const [globalFilter, setGlobalFilter] = useState('');

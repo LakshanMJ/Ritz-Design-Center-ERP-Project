@@ -53,7 +53,7 @@ const LocalTransport = () => {
     
     // Table states
     const [pageIndex, setPageIndex] = useState(0);
-    const [pageSize, setPageSize] = useState(50);
+    const [pageSize, setPageSize] = useState(5);
     const [totalCount, setTotalCount] = useState(0);
     const [sorting, setSorting] = useState({});
     const [globalFilter, setGlobalFilter] = useState('');
@@ -495,7 +495,7 @@ const LocalTransport = () => {
 
     const resetStates = () => {
         setPageIndex(0);
-        setPageSize(50);
+        setPageSize(5);
         setTotalCount(0);
         setGlobalFilter('');
         setColumnFilters([]);

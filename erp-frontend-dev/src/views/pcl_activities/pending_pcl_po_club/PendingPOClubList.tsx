@@ -40,11 +40,11 @@ const PendingPOClubList = () => {
     const [selectedIds, setSelectedIds] = useState<any>([])
     const [pendingPCLPoClubDetails, setPendingPCLPoClubDetails] = useState<any>({})
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(50);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     const [searchText, setSearchText] = useState('');
 
     const fetchData = () => {
-        api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 50 ? rowsPerPage : 50, 0))
+        api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 5 ? rowsPerPage : 5, 0))
             .then((response) => {
                 const settlementData = response?.data;
                 setPendingPCLPoClubDetails({ ...settlementData })

@@ -25,7 +25,7 @@ const PCLMatching = ({ clubId, refreshData }: any) => {
     const [selectedIdDataSet, setSelectedIdDataSet] = useState<any>({ selectedIds: [], unSelectedIds: [] });
     const [showCriteria, setShowCriteria] = useState(false);
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(50);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     const [searchText, setSearchText] = useState('');
     const [selectedDates, setSelectedDates] = useState<any>({})
 
@@ -49,7 +49,7 @@ const PCLMatching = ({ clubId, refreshData }: any) => {
     const loadPendingPCList = () => {
         setIsLoadingPendingPoClubs(true)
         const requests = [
-            api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 50 ? rowsPerPage : 50, clubId)),
+            api.get(pendingPCLPOClubListURL(searchText, page + 1, rowsPerPage > 5 ? rowsPerPage : 5, clubId)),
         ]
         Promise.all(requests).then(response => {
             const [pendingPCLPoClub] = response.map((r: any) => r.data);
