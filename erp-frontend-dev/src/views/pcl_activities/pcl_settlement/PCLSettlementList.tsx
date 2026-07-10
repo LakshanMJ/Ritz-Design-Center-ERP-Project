@@ -40,7 +40,7 @@ const PCLSettlementList = () => {
     const [customers, setCustomers] = useState<any>([])
     const [selectedRowData, setSelectedRowData] = useState<any>([])
     const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(50);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
 
     const LoadSettlementData = () => {
         api.get(pclSettlementListURL(
@@ -49,7 +49,7 @@ const PCLSettlementList = () => {
             selectedSearchValues?.start_date || '', 
             selectedSearchValues?.end_date || '',
             page + 1, 
-            rowsPerPage > 50 ? rowsPerPage : 50, 
+            rowsPerPage > 5 ? rowsPerPage : 5, 
         ))
             .then((response) => {
                 const settlementData = response?.data;
