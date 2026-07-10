@@ -286,7 +286,7 @@ const OrderInquiryList = () => {
   };
   const resetStates = () => {
     setPageIndex(0);
-    setPageSize(50);
+    setPageSize(5);
     setTotalCount(0);
     setGlobalFilter('');
     setColumnFilters([]);
