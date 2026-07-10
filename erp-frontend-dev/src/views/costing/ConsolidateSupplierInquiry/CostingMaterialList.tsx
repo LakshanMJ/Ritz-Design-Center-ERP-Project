@@ -43,6 +43,7 @@ const CostingMaterialList = () => {
         costingTypes: [],
         costPerUnitTypes: [],
     });
+    console.log(metaData,'metaData')
     const [openMaterialDetailModal, setOpenMaterialDetailModal] = useState<any>({})
     const [openMaterialCostEnterModal, setOpenMaterialCostEnterModal] = useState<any>({})
     const [costingMaterislList, setCostingMaterislList] = useState<any>({});
@@ -110,22 +111,29 @@ const CostingMaterialList = () => {
     ];
 
     const getMetaData = () => {
+        console.log("Inside")
         Promise.all([
             api.get(RestUrls.customersURL()),
             api.get(getActiveSuppliersURL()),
-            api.get(getConsumptionUnits()),
-            api.get(getCostPerUnitTypesURL()),
-            api.get(getTransportTypesURL()),
-            api.get(paymentModesListURL()),
-        ]).then(([customers, suppliers, consumptionUnits, costPerUnits, transportTypes, paymentMethods]) => {
+            // api.get(getConsumptionUnits()),
+            // api.get(getCostPerUnitTypesURL()),
+            // api.get(getTransportTypesURL()),
+            // api.get(paymentModesListURL()),
+        ]).then(([customers, suppliers, 
+            // consumptionUnits,
+            //  costPerUnits, 
+            //  transportTypes, 
+            //  paymentMethods
+            ]) => {
+            console.log("Customers response:", customers);
             setMetaData((prev: any) => ({
                 ...prev,
                 customers: customers.data,
                 suppliers: suppliers.data,
-                consumptionUnits: consumptionUnits.data,
-                costPerUnitTypes: costPerUnits.data,
-                shipModes: transportTypes.data,
-                payModes: paymentMethods.data
+                // consumptionUnits: consumptionUnits.data,
+                // costPerUnitTypes: costPerUnits.data,
+                // shipModes: transportTypes.data,
+                // payModes: paymentMethods.data
             }));
         }).catch(error => {
             toast.error(getDefaultError(error?.response?.status));
