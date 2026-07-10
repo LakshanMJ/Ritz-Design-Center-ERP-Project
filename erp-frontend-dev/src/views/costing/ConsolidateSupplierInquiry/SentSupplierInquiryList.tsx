@@ -224,15 +224,17 @@ const SentSupplierInquiryList = () => {
 
     const getMetaData = () => {
         Promise.all([
-            api.get(getActiveSuppliersURL()),
+            // api.get(getActiveSuppliersURL()),
             api.get(getConsumptionUnits()),
             api.get(getCostPerUnitTypesURL()),
             api.get(getTransportTypesURL()),
             api.get(paymentModesListURL()),
-        ]).then(([suppliers, consumptionUnits, costPerUnits, transportTypes, payModes]) => {
+        ]).then(([
+            // suppliers, 
+            consumptionUnits, costPerUnits, transportTypes, payModes]) => {
             setMetaData((prev: any) => ({
                 ...prev,
-                suppliers: suppliers.data,
+                // suppliers: suppliers.data,
                 consumptionUnits: consumptionUnits.data,
                 costPerUnitTypes: costPerUnits.data,
                 shipModes: transportTypes.data,
