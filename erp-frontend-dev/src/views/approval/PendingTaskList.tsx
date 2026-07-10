@@ -21,7 +21,7 @@ const PendingTaskList = ({ taskType }: any) => {
   const [isLoading, setIsLoading] = useState(true);
   const [pendingApprovalList, setPendingApprovalList] = useState<any>([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(50);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [searchedText, setSearchedText] = useState('');
   const [approvalEntityList, setApprovalEntityList] = useState<any>([]);
   const [selectType, setSelectedType] = useState('all');
@@ -29,8 +29,8 @@ const PendingTaskList = ({ taskType }: any) => {
 
   const fetchData = () => {
     const selectedURL = taskType == 'my_tasks' ? 
-    myPendingTaskListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all') : 
-    allPendingTaskListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all')
+    myPendingTaskListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all') : 
+    allPendingTaskListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all')
     const requests = [
       api.get(selectedURL),
     ]
