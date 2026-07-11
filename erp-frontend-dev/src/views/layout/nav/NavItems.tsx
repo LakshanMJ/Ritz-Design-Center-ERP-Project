@@ -224,7 +224,7 @@ const NavItems = () => {
         //     icon: <ListIcon sx={iconStyle} />,
         //     selected: router.pathname.includes('/admin/item')
         // }
-        , {
+        {
             name: 'Countries',
             url: '/admin/country',
             icon: <PublicOutlinedIcon sx={iconStyle} />,
@@ -244,7 +244,7 @@ const NavItems = () => {
             url: '/admin/customer',
             icon: <PeopleIcon sx={iconStyle} />,
             selected: router.pathname.includes('/admin/customer')
-        },
+        }
         // {
         //     name: 'Suppliers',
         //     url: '/admin/supplier',
