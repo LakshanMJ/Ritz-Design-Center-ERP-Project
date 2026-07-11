@@ -247,7 +247,7 @@ const SentSupplierInquiryList = () => {
 
     const resetStates = () => {
         setPageIndex(0);
-        setPageSize(50);
+        setPageSize(5);
         setTotalCount(0);
         setGlobalFilter('');
         setColumnFilters([]);
@@ -281,7 +281,7 @@ const SentSupplierInquiryList = () => {
 
         const queryParams = getQueryParams(globalFilterValue, columnFiltersValue, sortingValue);
 
-        api.get(sendConsolidateSupplierInquiryListURL(pageIndexValue + 1, pageSizeValue, status, queryParams)).then((resp: any) => {
+        api.get((pageIndexValue + 1, pageSizeValue, status, queryParams)).then((resp: any) => {
             setTotalCount(resp?.data?.count)
             setSendCosolidateSupplierInquiryList({ ...resp?.data });
         }).catch(error => {
