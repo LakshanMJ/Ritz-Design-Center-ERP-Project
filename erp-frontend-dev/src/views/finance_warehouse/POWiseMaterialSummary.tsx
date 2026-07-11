@@ -30,8 +30,8 @@ const POWiseMaterialSummary = ({ customer, costingId }: any) => {
   });
   const [activeTab, setActiveTab] = useState<string>("fabric");
   const [pageIndex, setPageIndex] = useState(0);
-  const [shortCodePageSize, setShortCodePageSize] = useState(50);
-  const [tablePageSize, setTablePageSize] = useState(50);
+  const [shortCodePageSize, setShortCodePageSize] = useState(5);
+  const [tablePageSize, setTablePageSize] = useState(5);
   const [isScrollLoading, setIsScrollLoading] = useState(false);
   const [hasMoreData, setHasMoreData] = useState(true);
   const listRef = useRef<HTMLDivElement>(null);

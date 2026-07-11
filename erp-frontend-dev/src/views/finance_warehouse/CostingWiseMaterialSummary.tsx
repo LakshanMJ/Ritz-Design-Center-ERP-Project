@@ -34,8 +34,8 @@ const CostingWiseMaterialSummary = () => {
   });
   const [activeTab, setActiveTab] = useState<string>("fabric");
   const [pageIndex, setPageIndex] = useState(0);
-  const [shortCodePageSize, setShortCodePageSize] = useState(50);
-  const [tablePageSize, setTablePageSize] = useState(50);
+  const [shortCodePageSize, setShortCodePageSize] = useState(5);
+  const [tablePageSize, setTablePageSize] = useState(5);
   const [isScrollLoading, setIsScrollLoading] = useState(false);
   const [hasScrolledToBottom, setHasScrolledToBottom] = useState(false);
   const router = useRouter();

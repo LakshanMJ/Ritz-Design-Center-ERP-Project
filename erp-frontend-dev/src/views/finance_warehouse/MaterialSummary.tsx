@@ -25,7 +25,7 @@ const MaterialSummary = () => {
   });
   const [activeTab, setActiveTab] = useState<string>("fabric");
   const [pageIndex, setPageIndex] = useState(0);
-  const [tablePageSize, setTablePageSize] = useState(50);
+  const [tablePageSize, setTablePageSize] = useState(5);
   const tableRef = useRef(null);
 
   const categories = ['fabric', 'sewing_trim', 'packaging_trim'];
