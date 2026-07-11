@@ -123,62 +123,62 @@ const MaterialSummary = () => {
         [category]: true
       }));
   
-      fetchMaterialData(customerId, category, 0, tablePageSize);
+      // fetchMaterialData(customerId, category, 0, tablePageSize);
     });
   };
 
-  const fetchMaterialData = (customerId: string, category: string, pageIndex: number, pageSize: number) => {
-    const url = customerId
-      ? VirtualWarehouseUrls.MaterialSummarybyCustomerURL(customerId, category, '', '', pageIndex + 1, pageSize)
-      : VirtualWarehouseUrls.MaterialSummarybyCustomerURL('', category, '', '', pageIndex + 1, pageSize);
+  // const fetchMaterialData = (customerId: string, category: string, pageIndex: number, pageSize: number) => {
+  //   const url = customerId
+  //     ? VirtualWarehouseUrls.MaterialSummarybyCustomerURL(customerId, category, '', '', pageIndex + 1, pageSize)
+  //     : VirtualWarehouseUrls.MaterialSummarybyCustomerURL('', category, '', '', pageIndex + 1, pageSize);
 
-    api.get(url)
-      .then((response) => {
-        setCategoryData(prev => ({
-          ...prev,
-          [category]: response.data?.results || []
-        }));
+  //   api.get(url)
+  //     .then((response) => {
+  //       setCategoryData(prev => ({
+  //         ...prev,
+  //         [category]: response.data?.results || []
+  //       }));
         
-        setPaginationData(prev => ({
-          ...prev,
-          [category]: {
-            count: response.data?.count || 0,
-            next: response.data?.next,
-            previous: response.data?.previous,
-            pageIndex: pageIndex,
-            pageSize: pageSize
-          }
-        }));
-      })
-      .catch(error => {
-        toast.error(`Error loading ${categoryLabels[category]}: ${getDefaultError(error?.response?.status)}`);
-      })
-      .finally(() => {
-        setLoadingStates(prev => ({
-          ...prev,
-          [category]: false
-        }));
-      });
-  };
+  //       setPaginationData(prev => ({
+  //         ...prev,
+  //         [category]: {
+  //           count: response.data?.count || 0,
+  //           next: response.data?.next,
+  //           previous: response.data?.previous,
+  //           pageIndex: pageIndex,
+  //           pageSize: pageSize
+  //         }
+  //       }));
+  //     })
+  //     .catch(error => {
+  //       toast.error(`Error loading ${categoryLabels[category]}: ${getDefaultError(error?.response?.status)}`);
+  //     })
+  //     .finally(() => {
+  //       setLoadingStates(prev => ({
+  //         ...prev,
+  //         [category]: false
+  //       }));
+  //     });
+  // };
 
   const handleTabChange = (event: any, newValue: string) => {
     setActiveTab(newValue);
     setPageIndex(0);
-    fetchMaterialData(
-      selectedCustomer || '', 
-      newValue, 
-      0, 
-      tablePageSize
-    );
+    // fetchMaterialData(
+    //   selectedCustomer || '', 
+    //   newValue, 
+    //   0, 
+    //   tablePageSize
+    // );
   };
 
   const handlePageNumberChange = (event: any, newPage: number) => {
-    fetchMaterialData(
-      selectedCustomer || '', 
-      activeTab, 
-      newPage, 
-      paginationData[activeTab].pageSize
-    );
+    // fetchMaterialData(
+    //   selectedCustomer || '', 
+    //   activeTab, 
+    //   newPage, 
+    //   paginationData[activeTab].pageSize
+    // );
     
     setPaginationData(prev => ({
       ...prev,
@@ -202,12 +202,12 @@ const MaterialSummary = () => {
       }
     }));
     
-    fetchMaterialData(
-      selectedCustomer || '', 
-      activeTab, 
-      0, 
-      newSize
-    );
+    // fetchMaterialData(
+    //   selectedCustomer || '', 
+    //   activeTab, 
+    //   0, 
+    //   newSize
+    // );
   };
 
   useEffect(() => {
