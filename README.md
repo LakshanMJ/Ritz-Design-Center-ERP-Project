@@ -10,7 +10,7 @@ Focused on optimizing REST API performance and improving frontend responsiveness
 
 ## 🚀 Live Demo
 
-🔗 **Live Application:** [https://ritz-design-center-erp-project.vercel.app/](https://nexa-erp-project.vercel.app/)
+🔗 **Live Application:** https://nexa-erp-project.vercel.app/
 
 Click **"Continue as Demo Admin"** on the login page to explore the ERP system.
 
