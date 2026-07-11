@@ -217,12 +217,14 @@ const NavItems = () => {
         isGroupLabel: true,
         icon: <SettingsIcon sx={iconStyle} />,
         allow_roles: [ROLES.ADMIN],
-        children: [{
-            name: 'Items',
-            url: '/admin/item',
-            icon: <ListIcon sx={iconStyle} />,
-            selected: router.pathname.includes('/admin/item')
-        }, {
+        children: [
+        // {
+        //     name: 'Items',
+        //     url: '/admin/item',
+        //     icon: <ListIcon sx={iconStyle} />,
+        //     selected: router.pathname.includes('/admin/item')
+        // }
+        , {
             name: 'Countries',
             url: '/admin/country',
             icon: <PublicOutlinedIcon sx={iconStyle} />,
@@ -242,12 +244,14 @@ const NavItems = () => {
             url: '/admin/customer',
             icon: <PeopleIcon sx={iconStyle} />,
             selected: router.pathname.includes('/admin/customer')
-        }, {
-            name: 'Suppliers',
-            url: '/admin/supplier',
-            icon: <LowPriorityIcon sx={iconStyle} />,
-            selected: router.pathname.includes('/admin/supplier')
-        }, {
+        },
+        // {
+        //     name: 'Suppliers',
+        //     url: '/admin/supplier',
+        //     icon: <LowPriorityIcon sx={iconStyle} />,
+        //     selected: router.pathname.includes('/admin/supplier')
+        // }
+        , {
             name: 'Seasons',
             url: '/admin/season',
             icon: <LocalFloristIcon sx={iconStyle} />,
