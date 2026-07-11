@@ -8,6 +8,13 @@ Focused on optimizing REST API performance and improving frontend responsiveness
 
 **Note: This repository contains a modified, limited version of the original ERP platform with dummy data only. It is intended solely to showcase my contributions and does not represent the full software used in the company.
 
+## 🚀 Live Demo
+
+🔗 **Live Application:** https://ritz-design-center-erp-project.vercel.app/
+
+Click **"Continue as Demo Admin"** on the login page to explore the ERP system.
+
+> **Note:** This is a limited demo version containing dummy data only.
 
 # Setup Guide
 
