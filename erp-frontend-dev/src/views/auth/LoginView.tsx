@@ -60,7 +60,7 @@ const LoginView = () => {
         <Box sx={{
             display: 'flex',
             flexGrow: 1,
-            backgroundImage: 'url("/images/jeans.png")',
+            backgroundImage: 'url("/images/jeans.webp")',
             backgroundSize: 'cover',
             backgroundPosition: 'left',
             backgroundRepeat: 'no-repeat',
