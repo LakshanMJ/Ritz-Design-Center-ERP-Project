@@ -38,15 +38,18 @@ const SupplierClaimList = () => {
     const fetchData = (type: any, initialLoadStatus: any) => {
         setIsLoadingClaimList(true);
         const requests = [
-            api.get(supplierClaimListURL(type)),
+            // api.get(supplierClaimListURL(type)),
         ];
         if (initialLoadStatus) {
             requests.push(api.get(customersURL()));
         }
         Promise.all(requests).then(resp => {
             const respData = resp.map((r: any) => r.data);
-            const [claimList, customers] = respData;
-            setSupplierClaimList({ ...claimList });
+            const [
+                // claimList,
+                customers
+            ] = respData;
+            // setSupplierClaimList({ ...claimList });
             if (initialLoadStatus) {
                 setCustomerData([...customers]);
             }
