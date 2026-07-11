@@ -23,15 +23,15 @@ const CompletedApprovalList = ({ approvalType }: any) => {
   const [completedApprovalList, setCompletedApprovalList] = useState<any>([]);
   const [approvalEntityList, setApprovalEntityList] = useState<any>([]);
   const [currentPage, setCurrentPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(50);
+  const [rowsPerPage, setRowsPerPage] = useState(5);
   const [searchedText, setSearchedText] = useState('');
   const [selectType, setSelectedType] = useState('all');
   const [isLoadingCircularLoader, setIsLoadingCircularLoader] = useState(false);
 
   const fetchData = () => {
     const selectedUrl = approvalType == 'my_approval' ?
-      myCompletedApprovalListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all') :
-      allCompletedapprovalListURL(currentPage + 1, rowsPerPage > 50 ? rowsPerPage : 50, searchedText, selectType || 'all')
+      myCompletedApprovalListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all') :
+      allCompletedapprovalListURL(currentPage + 1, rowsPerPage > 5 ? rowsPerPage : 5, searchedText, selectType || 'all')
 
     const requests = [
       api.get(selectedUrl),
