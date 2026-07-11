@@ -18,9 +18,7 @@ Click **"Continue as Demo Admin"** on the login page to explore the ERP system.
 
 # Setup Guide
 
-This guide will help you set up, run, and access the ERP System from the repository:
-
-[https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project](https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project)
+This guide will help you set up, run, and access the ERP System
 
 ---
 
