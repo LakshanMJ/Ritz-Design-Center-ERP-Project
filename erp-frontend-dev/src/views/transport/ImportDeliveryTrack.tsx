@@ -271,19 +271,19 @@ const fetchTransportDeliveryCounts = () => {
         })
 };
 
-const fetchDeliveriesToBeStartedData = () => {
-    setIsLoading(true)
-    api.get(TransportUrls.supplierDeliveryListUrl())
-      .then((resp) => {
-        const deliveriesData = resp?.data;
-        updateTransportDeliveryDateTrackingData('deliveriesToBeStartedData',[...deliveriesData])
-      })
-      .catch((error) => {
-        toast.error(getDefaultError(error?.response?.status));
-      }).finally(()=>{
-        setIsLoading(false)
-    })
-};
+// const fetchDeliveriesToBeStartedData = () => {
+//     setIsLoading(true)
+//     api.get(TransportUrls.supplierDeliveryListUrl())
+//       .then((resp) => {
+//         const deliveriesData = resp?.data;
+//         updateTransportDeliveryDateTrackingData('deliveriesToBeStartedData',[...deliveriesData])
+//       })
+//       .catch((error) => {
+//         toast.error(getDefaultError(error?.response?.status));
+//       }).finally(()=>{
+//         setIsLoading(false)
+//     })
+// };
 
 const fetchTransportDeliveryDateTrackingListData = (
     transport_type:any,
@@ -382,7 +382,7 @@ const deleteSelectedDeliveries = (deletedId: number) => {
 
 const handleTransportDeliveryDateTrackingModalClose = () => {
     setTransportDeliveryDateTrackingDataModalOpen(false);
-    fetchDeliveriesToBeStartedData()
+    // fetchDeliveriesToBeStartedData()
     fetchTransportDeliveryCounts()
 };
 
@@ -438,7 +438,7 @@ useEffect(() => {
 
 useEffect(() => {
     if (selectedDeliveryAndTransportStatus?.selectedDeliveryStatus?.includes('deliveries_to_be_started')){
-        fetchDeliveriesToBeStartedData()
+        // fetchDeliveriesToBeStartedData()
     } else {
         fetchTransportDeliveryDateTrackingListData('',selectedDeliveryAndTransportStatus?.selectedDeliveryStatus)
     }
@@ -732,7 +732,7 @@ return(
                         closeModal={handleTransportDeliveryDateTrackingModalClose}
                         clearSelectedDeliveries={clearSelectedDeliveries}
                         deleteSelectedDeliveries={deleteSelectedDeliveries}
-                        fetchData={fetchDeliveriesToBeStartedData}/>
+                        fetchData={[]}/>
             </RitzModal>
         )}
 

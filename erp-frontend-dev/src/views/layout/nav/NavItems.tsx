@@ -408,42 +408,44 @@ const NavItems = () => {
         // }
         ]
     },
+    // {
+    //     name: 'Materials',
+    //     isGroupLabel: true,
+    //     icon: <CategoryIcon sx={iconStyle} />,
+    //     allow_roles: [ROLES.ADMIN, ROLES.MERCHANT_ADMIN],
+    //     children: [
+    //     {
+    //         name: 'Materials',
+    //         url: '/admin/material_types/materials',
+    //         icon: <DashboardCustomizeIcon sx={iconStyle} />,
+    //         selected: router.pathname.includes('/admin/material_types/materials'),
+    //         allow_roles: [ROLES.ADMIN,]
+    //     },
+    //     // {
+    //     //     name: 'Created Materials',
+    //     //     url: '/admin/material_types/created_materials',
+    //     //     icon: <DashboardCustomizeIcon sx={iconStyle} />,
+    //     //     selected: router.pathname.includes('/admin/material_types/created_materials'),
+    //     //     allow_roles: [ROLES.MERCHANT,]
+    //     // }, 
+    //     // {
+    //     //     name: 'Customer Materials',
+    //     //     url: '/admin/material_types/customer_materials',
+    //     //     icon: <DashboardCustomizeIcon sx={iconStyle} />,
+    //     //     selected: router.pathname.includes('/admin/material_types/customer_materials'),
+    //     //     allow_roles: [ROLES.MERCHANT,]
+    //     // },
+    //     // {
+    //     //     name: 'Material Options',
+    //     //     url: '/admin/material_types/material_options',
+    //     //     icon: <PermDataSettingIcon sx={iconStyle} />,
+    //     //     selected: router.pathname.includes('/admin/material_types') && !router.pathname.includes('/admin/material_types/materials') && !router.pathname.includes('/admin/material_types/created_materials' ) && !router.pathname.includes('/admin/material_types/customer_materials'),
+    //     //     //for the above router path, added a new condition to the created materials page
+    //     //     allow_roles: [ROLES.ADMIN, ROLES.MERCHANT_ADMIN]
+    //     // }
+    // ]
+    // },
     {
-        name: 'Materials',
-        isGroupLabel: true,
-        icon: <CategoryIcon sx={iconStyle} />,
-        allow_roles: [ROLES.ADMIN, ROLES.MERCHANT_ADMIN],
-        children: [{
-            name: 'Materials',
-            url: '/admin/material_types/materials',
-            icon: <DashboardCustomizeIcon sx={iconStyle} />,
-            selected: router.pathname.includes('/admin/material_types/materials'),
-            allow_roles: [ROLES.ADMIN,]
-        },
-        // {
-        //     name: 'Created Materials',
-        //     url: '/admin/material_types/created_materials',
-        //     icon: <DashboardCustomizeIcon sx={iconStyle} />,
-        //     selected: router.pathname.includes('/admin/material_types/created_materials'),
-        //     allow_roles: [ROLES.MERCHANT,]
-        // }, 
-        // {
-        //     name: 'Customer Materials',
-        //     url: '/admin/material_types/customer_materials',
-        //     icon: <DashboardCustomizeIcon sx={iconStyle} />,
-        //     selected: router.pathname.includes('/admin/material_types/customer_materials'),
-        //     allow_roles: [ROLES.MERCHANT,]
-        // },
-        // {
-        //     name: 'Material Options',
-        //     url: '/admin/material_types/material_options',
-        //     icon: <PermDataSettingIcon sx={iconStyle} />,
-        //     selected: router.pathname.includes('/admin/material_types') && !router.pathname.includes('/admin/material_types/materials') && !router.pathname.includes('/admin/material_types/created_materials' ) && !router.pathname.includes('/admin/material_types/customer_materials'),
-        //     //for the above router path, added a new condition to the created materials page
-        //     allow_roles: [ROLES.ADMIN, ROLES.MERCHANT_ADMIN]
-        // }
-    ]
-    }, {
         name: 'Users',
         isGroupLabel: true,
         icon: <ManageAccountsIcon sx={iconStyle} />,
