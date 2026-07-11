@@ -18,6 +18,7 @@ const LoginView = () => {
     const [errorMsg, setErrorMsg] = useState('');
     const [errors, setErrors] = useState<any>({});
     const [isSaving, setIsSaving] = useState(false);
+    const [isDemoSaving, setIsDemoSaving] = useState(false);
     const [show, setShow] = useState(false);
 
     const handleClick = () => setShow(!show);
@@ -50,10 +51,30 @@ const LoginView = () => {
         }
     };
 
+    const handleDemoLogin = async () => {
+        setErrorMsg('');
+        setErrors({});
+        setIsDemoSaving(true);
+
+        try {
+            const auth = await login('admin', 'admin@12345');
+
+            if (auth?.success) {
+                router.push('/');
+            } else {
+                setErrorMsg('Unable to login.');
+                setIsDemoSaving(false);
+            }
+        } catch (error: any) {
+            setErrorMsg('Unable to login as demo admin.');
+            setIsDemoSaving(false);
+        }
+    };
+
     useEffect(() => {
         if (isLoggedIn) {
             router.push('/'); //TODO add redirect url
-        }    
+        }
     }, []);
 
     return (
@@ -139,7 +160,7 @@ const LoginView = () => {
                                                     opacity: 1,
                                                 },
                                             },
-                                            
+
                                             '& input:-webkit-autofill': {
                                                 borderRadius: 'inherit',
                                                 boxShadow: '0 0 0 1000px rgba(255,255,255,0.15) inset !important',
@@ -193,7 +214,7 @@ const LoginView = () => {
                                                     opacity: 1,
                                                 },
                                             },
-                                          
+
                                             '& input:-webkit-autofill': {
                                                 borderRadius: 'inherit',
                                                 boxShadow: '0 0 0 1000px rgba(255,255,255,0.2) inset !important',
@@ -229,6 +250,40 @@ const LoginView = () => {
                                         {isSaving && <SaveSpinner />} Login
                                     </Button>
                                 </Box>
+                                <Button
+                                    fullWidth
+                                    size="large"
+                                    disabled={isDemoSaving || isSaving}
+                                    onClick={handleDemoLogin}
+                                    sx={{
+                                        mt: 0.5,
+                                        py: 1.3,
+                                        color: '#1a1a1a',
+                                        fontWeight: 600,
+                                        borderRadius: 2,
+                                        textTransform: 'none',
+                                        background: 'rgba(255, 255, 255, 0.35)',
+                                        border: '1px solid rgba(255, 255, 255, 0.5)',
+                                        backdropFilter: 'blur(10px)',
+                                        boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)',
+                                        transition: 'all 0.25s ease',
+
+                                        '&:hover': {
+                                            background: 'rgba(255, 255, 255, 0.5)',
+                                            borderColor: 'rgba(255, 255, 255, 0.8)',
+                                            transform: 'translateY(-2px)',
+                                            boxShadow: '0 6px 18px rgba(0, 0, 0, 0.15)',
+                                        },
+
+                                        '&.Mui-disabled': {
+                                            background: 'rgba(255, 255, 255, 0.2)',
+                                            color: 'rgba(0, 0, 0, 0.4)',
+                                        },
+                                    }}
+                                >
+                                    {isDemoSaving && <SaveSpinner />}
+                                    Continue as Demo Admin
+                                </Button>
                             </Stack>
                         </form>
                     </Grid>
