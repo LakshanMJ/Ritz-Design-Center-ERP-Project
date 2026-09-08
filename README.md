@@ -8,12 +8,17 @@ Focused on optimizing REST API performance and improving frontend responsiveness
 
 **Note: This repository contains a modified, limited version of the original ERP platform with dummy data only. It is intended solely to showcase my contributions and does not represent the full software used in the company.
 
+## 🚀 Live Demo
+
+🔗 **Live Application:** https://nexa-erp-project.vercel.app/
+
+Click **"Continue as Demo Admin"** on the login page to explore the ERP system.
+
+> **Note:** This is a limited demo version containing dummy data only.
 
 # Setup Guide
 
-This guide will help you set up, run, and access the ERP System from the repository:
-
-[https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project](https://github.com/LakshanMJ/Ritz-Design-Center-ERP-Project)
+This guide will help you set up, run, and access the ERP System
 
 ---
 
