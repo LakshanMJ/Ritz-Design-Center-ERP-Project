@@ -5,7 +5,7 @@
 //   "https://nexa-erp-project.onrender.com/api/";
 
 export const apiBaseURL = () =>
-    "http://13.60.217.166:8000/api/";
+    "https://nexa2.duckdns.org/api/";
 
 
 /* COSTING API URLS */
